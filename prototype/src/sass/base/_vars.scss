@@ -1,0 +1,44 @@
+
+$color-primary: #000000;
+$color-secondary: #e9f5f7;
+$color-tertiary: #f5a623;
+$color-yellow0: #ffc465;
+$color-yellow1: #F5A623;
+$color-yellow2: #C18016;
+$color-yellow3: #8b5702;
+$color-green: #3d6467;
+$color-green1: #308e96;
+$color-green2: #2f8e95;
+$color-green3: #1d7680;
+$color-green4: #0a5862;
+$color-purple: #872c91;
+$color-grey1: #f7f7f7;
+$color-grey2: #ebebeb;
+$color-grey3: #9b9b9b;
+$color-grey4: #4A4A4A;
+
+$font-primary: 'Poppins', sans-serif;
+
+@mixin shadow() {
+    box-shadow: 0 2px 4px 0 rgba($color: #000000, $alpha: 0.25);
+}
+
+@mixin shadowMore() {
+    box-shadow: 0 5px 20px 0 rgba($color: #000000, $alpha: 0.4);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 5px rgba($color: #000000, $alpha: .25);
+}
+
+.box-shadow {
+    @include shadow();
+}
+
+.grey-bg {
+    background-color: #f7f7f7;
+}
+
+.nomargin {
+    margin: 0!important;
+}

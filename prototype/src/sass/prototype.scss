@@ -1,0 +1,18 @@
+/**
+ * Prototype vars
+ *
+ * Define vars here that may change between prototype and build.
+ *
+ * E.g. image path may vary due to wordpress conventions.
+ */
+
+$image-path: '../img';
+$font-path: '../fonts';
+
+/**
+ * Use this variable to indicate whether or not server side device detection will be used to withhold
+ * sections of markup from being rendered based on the detected device.
+ */
+$mobile-detect: false;
+
+@import "app";

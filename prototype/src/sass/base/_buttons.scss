@@ -1,0 +1,105 @@
+.btn {
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 11px 40px;
+	line-height: 1;
+	border-radius: 0!important;
+	transition: all 300ms ease;
+
+	@media(max-width: 767px) {
+		padding: 7px 24px;
+	}
+
+	&__normal {
+		border: 3px solid black;
+		color: black;
+		background-color: $color-tertiary;
+		font-size: 19px;
+
+		@media(max-width: 767px) {
+			border-width: 2px;
+			font-size: 16px;
+		}
+
+		&:hover {
+			border-color: $color-tertiary;
+			background-color: black;
+			color: $color-tertiary!important;
+		}
+
+	}
+
+	&__border {
+		border: 3px solid $color-tertiary;
+		color: $color-tertiary!important;
+		font-size: 19px;
+
+		@media(max-width: 767px) {
+			border-width: 2px;
+			font-size: 16px;
+		}
+
+		&:hover {
+			background-color: $color-yellow3;
+		}
+
+	}
+
+	&__full {
+		border: 3px solid $color-tertiary;
+		background-color: $color-tertiary;
+		color: white!important;
+		font-size: 19px;
+		transform-origin: right bottom;
+		box-shadow: 3px 3px 0 0 $color-yellow2;
+
+		@media(max-width: 767px) {
+			border-width: 2px;
+			font-size: 16px;
+		}
+
+		&:hover {
+			color: $color-yellow3!important;
+			box-shadow: 5px 5px 0 0 $color-yellow3;
+			transform: translateX(-2px) translateY(-2px) scale(1.05)!important;
+		}
+	}
+
+	&.black {
+		background-color: rgba($color: #000000, $alpha: 0.7);
+
+		&:hover {
+			background-color: rgba($color: #000000, $alpha: 0.9);
+			@include shadowMore;
+		}
+
+	}
+
+	&.brown {
+		background-color: $color-yellow3;
+
+		&:hover {
+			background-color: rgba($color: #000000, $alpha: 0.8);
+		}
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none!important;
+		outline: none!important;
+
+		* {
+			text-decoration: none!important;
+			outline: none!important;
+		}
+
+	}
+
+	&:hover {
+		transform: translateY(-3px) scale(1.1);
+	}
+
+}
