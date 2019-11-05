@@ -1,0 +1,11 @@
+/.phpintel/
+/prototype/node_modules
+/prototype/.sass-cache
+/design
+.DS_Store
+/build/composer.lock
+/build/*
+/.DS_Store
+**/.DS_Store
+!/.gitignore
+!/build/wp-content/themes/sative
