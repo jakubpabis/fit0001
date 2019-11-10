@@ -1,0 +1,107 @@
+.diets {
+
+    &__home {
+        padding: 50px 0 170px;
+        background-color: #F5F5F5;
+
+        &-title {
+            color: $color-secondary;
+        }
+
+        &-card {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: .15);
+                transition: all 200ms ease-out;
+
+                .img {
+                    overflow: hidden;
+
+                    img {
+                        transition: all 200ms ease-out;
+                    }
+
+                }
+
+                .line {
+                    padding: 12px 25px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    * {
+                        margin: 0;
+                        color: white;
+                    }
+
+                    i {
+                        font-size: 32px;
+                    }
+
+                }
+
+                .text {
+                    padding: 25px 25px;
+                    background-color: white;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    align-self: flex-end;
+                    flex-grow: 10;
+
+                    p {
+                        margin: 0 0 1em 0;
+                        line-height: 1.5;
+                    }
+
+                }
+
+                .btns {
+                    width: 100%;
+                    margin-top: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    align-self: flex-end;
+
+                    .more {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                }
+
+                &:hover {
+                    box-shadow: 0 7px 15px 0 rgba($color: #000000, $alpha: .25);
+                    transform: translateY(-10px);
+
+                    .img {
+
+                        img {
+                            transform: scale(1.2) rotate(5deg);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &-more {
+            margin-top: 40px;
+        }
+
+    }
+
+}

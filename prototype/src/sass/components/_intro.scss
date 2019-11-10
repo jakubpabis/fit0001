@@ -1,0 +1,27 @@
+.intro {
+    margin-top: -200px;
+    padding: 300px 0 100px;
+
+    &__home {
+        background-color: $color-secondary;
+        background: rgb(53,9,82);
+        background: -moz-linear-gradient(0deg, rgba(53,9,82,1) 0%, rgba(80,27,115,1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(53,9,82,1) 0%, rgba(80,27,115,1) 100%);
+        background: linear-gradient(0deg, rgba(53,9,82,1) 0%, rgba(80,27,115,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#350952",endColorstr="#501b73",GradientType=1);
+        color: white;
+
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: white;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+
+    }
+
+}
