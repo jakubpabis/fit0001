@@ -6,6 +6,11 @@
 @import "base/buttons";
 @import "base/layout";
 
+// PLUGINS
+@import "plugins/owl.carousel.css";
+@import "plugins/owl.theme.default.css";
+@import "plugins/datepicker.min.css";
+@import "plugins/nice-select.css";
 
 // MODULES
 @import "components/navigation";

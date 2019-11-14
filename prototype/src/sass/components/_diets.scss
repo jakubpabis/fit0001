@@ -1,4 +1,7 @@
 .diets {
+    padding: 300px 0 100px;
+    background-color: #F5F5F5;
+    margin-top: -200px;
 
     &__home {
         padding: 50px 0 170px;
@@ -100,6 +103,730 @@
 
         &-more {
             margin-top: 40px;
+        }
+
+    }
+
+    &__row {
+        margin-bottom: 100px;
+
+        &:nth-child(2n) {
+
+            .diets__product-text {
+                order: 100;
+            }
+
+            .diets__product-image {
+                order: 1;
+            }
+
+        }
+            
+    }
+
+    &__product {
+        overflow: hidden;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: .15);
+
+        &-text {
+            padding: 0 30px;
+            color: $color-grey4;
+            display: flex;
+            flex-wrap: wrap;
+
+            ul {
+                margin: 0;
+
+                li {
+                    margin: 0;
+                    padding: 0.2em 0;
+                }
+
+            }
+
+        }
+
+        &-image {
+            padding: 0;
+        }
+
+        &-btn {
+            align-self: flex-end;
+            margin-top: 20px;
+            margin-left: -30px;
+            margin-right: -30px;
+            min-width: 100%;
+            flex-basis: calc(100% + 60px);
+            padding: 20px 30px;
+            color: white;
+            font-weight: 700;
+            position: relative;
+            text-align: center;
+            display: block;
+            text-decoration: none!important;
+            font-size: 24px;
+            transition: all 250ms ease-out;
+            transform-origin: center bottom;
+
+            &:hover {
+                color: white;
+                transform: scale(1.1);
+            }
+
+        }
+
+    }
+
+    &__diet {
+        padding: 250px 0 75px;
+        background-color: white;
+        margin-top: -200px;
+    
+        .btn {
+            margin-top: 20px;
+        }
+
+        &.purple {
+
+            * {
+                color: $color-purple;
+            }
+
+        }
+    
+        &.orange {
+
+            * {
+                color: $color-orangedark;
+            }
+
+        }
+
+        &.blue {
+
+            * {
+                color: $color-bluedark;
+            }
+
+        }
+
+        &.green {
+
+            * {
+                color: $color-greendark;
+            }
+
+        }
+
+    }
+
+    &__order {
+        padding: 50px 0 150px;
+        background-color: #f5f5f5;
+
+        h2 {
+
+            &.purple {
+                color: $color-purplelight;
+
+                span {
+                    color: $color-purple;
+                }
+
+            }
+
+            &.orange {
+                color: $color-orange;
+
+                span {
+                    color: $color-orangedark;
+                }
+
+            }
+
+            &.green {
+                color: $color-green;
+
+                span {
+                    color: $color-greendark;
+                }
+
+            }
+
+            &.blue {
+                color: $color-blue;
+
+                span {
+                    color: $color-bluedark;
+                }
+
+            }
+
+        }
+
+        &-form {
+            margin-top: 30px;
+            text-align: center;
+            position: relative;
+
+            .btn {
+                margin-top: 40px;
+
+                i {
+                    margin-left: 12px;
+                    margin-right: -6px;
+                    padding: 0;
+                }
+
+                &.slim {
+                    opacity: 0.6;
+                    margin-top: 30px;
+                    transform-origin: center center!important;
+
+                    i {
+                        margin-left: -4px;
+                        margin-right: 8px;
+                    }    
+
+                }
+
+            }
+
+        }
+
+        .owl-item {
+            padding: 0 20px;
+        }
+
+        &-card {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: .15);
+
+            .card-header {
+                padding: 5px 30px;
+                color: white;
+
+                .finalpay {
+                    margin: 0.3em 0;
+                    font-weight: 700!important;
+
+                    small {
+                        font-weight: 600!important;
+                    }
+
+                }
+
+                h4 {
+                    margin: 0.7em 0 0.3em;
+                }
+
+                h3 {
+
+                    small {
+                        font-size: 0.6em;
+                    }
+
+                }
+
+            }
+
+            .card-body {
+                padding: 45px 30px;
+
+                .inputs {
+                    font-size: 28px;
+                    display: inline-block;
+                    text-align: left;
+
+                    small {
+                        font-size: 16px;
+                    }
+                    
+                    .pretty {
+                        margin: 0;
+
+                        label {
+                            font-weight: 600;
+                            margin-left: 8px;
+                        }
+
+                        .state label:before {
+                            border-width: 3px;
+                        }
+
+                    }
+
+                    .result {
+                        margin-top: 30px;
+                    }
+
+                    .field {
+                        display: block;
+
+                        label {
+                            display: block;
+                            font-weight: 600;
+                            font-size: 19px;
+                            margin: 0 0 5px 0;
+
+                            small {
+                                opacity: 0.8;
+                                font-weight: 500;
+                                font-size: 0.7em;
+                            }
+
+                            span {
+                                font-weight: 700;
+                                color: red;
+                            }
+
+                        }
+
+                        input {
+                            border: 3px solid transparent;
+                            font-size: 18px;
+                            font-weight: 600;
+                            border-radius: 10px;
+                            appearance: none;
+                            padding: 8px 20px;
+                            margin-bottom: 30px;
+                            outline: 0!important;
+                        }
+
+                        ::placeholder {
+                            opacity: 1!important;
+                            color: #b5b5b5!important;
+                        }
+
+                    }
+
+                }
+
+                #order__calendar {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: $font-primary!important;
+
+                    * {
+                        font-family: $font-primary!important;
+                    }
+
+                    .datepicker-inline {
+                        padding: 30px;
+                    }
+
+                    .datepicker {
+                        border-width: 4px;
+                        font-weight: 700;
+                        width: 320px;
+                    }
+
+                    .-disabled- {
+                        color: $color-grey3;
+                        font-weight: 400!important;
+                    }
+
+                    .-current- {
+                        color: black;
+                        font-weight: 700!important;
+                        border: 2px solid black;
+                    }
+
+                    .datepicker--nav {
+                        padding: 8px;
+                        border-bottom-width: 2px;
+                    }
+
+                    .datepicker--days-names,
+                    .datepicker--nav-title {
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+
+                    .datepicker--days-names {
+                        margin-bottom: 8px;
+                    }
+
+                    .datepicker--cell {
+                        border-radius: 50px;
+                        font-weight: 500;
+                        height: 44px;
+                        font-size: 18px;
+                    }
+
+                }
+
+                .hours {
+                    text-align: center;
+                    position: relative;
+                    vertical-align: middle;
+
+                    input {
+                        padding: 6px 60px;
+                        max-width: 220px;
+                        width: auto;
+                        margin: 0;
+                        position: relative;
+                        text-align: center;
+                        font-size: 21px;
+                        font-weight: 600;
+                        border: 3px solid transparent;
+                        outline: 0!important;
+                        border-radius: 60px;
+                    }
+
+                    i {
+                        position: relative;
+                        font-size: 47px;
+                        line-height: 1;
+                        vertical-align: -10px;
+                        z-index: 9999;
+
+                        &.fa-minus-circle {
+                            transform: translateX(50px);
+                        }
+
+                        &.fa-plus-circle {
+                            transform: translateX(-50px);
+                        }
+
+                    }
+
+                }
+
+                .remember {
+                    margin-top: 2em;
+                }
+
+                .btns {
+                    text-align: center;
+
+                    .btn__full {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    .btn__border {
+                        margin-top: 20px;
+                        margin-bottom: 5px;
+                    }
+
+                    small {
+                        display: block;
+                        color: #878787!important;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    
+                }
+
+            }
+
+            &.purple {
+
+                .card-header {
+                    background-color: $color-purple;
+                }
+
+                .card-body {
+
+                    * {
+                        color: $color-purple;
+                    }
+    
+                    .inputs {
+
+                        .pretty {
+
+                            label {
+                                color: $color-purple;
+                            }
+    
+                            .state label:before {
+                                border-color: $color-purple;
+                            }
+
+                            input:checked~.state label:after {
+                                background-color: $color-purple!important;
+                            }
+    
+                        }
+
+                        .field {
+    
+                            input {
+                                border-color: $color-purple;
+                            }
+
+                        }
+    
+                    }
+
+                    #order__calendar {
+    
+                        .-selected- {
+                            background-color: $color-purple;
+                            color: white;
+                        }
+
+                        .datepicker {
+                            border-color: $color-purple;
+                        }
+
+                        .datepicker--nav {
+                            border-bottom-color: $color-purplelight;
+
+                            path { 
+                                stroke: $color-purplelight;
+                            }
+
+                        }
+
+                    }
+
+                    .hours {
+
+                        input {
+                            border-color: $color-purple;
+                        }
+
+                    }
+    
+                }
+
+            }
+
+            &.orange {
+
+                .card-header {
+                    background-color: $color-orangedark;
+                }
+
+                .card-body {
+
+                    * {
+                        color: $color-orangedark;
+                    }
+    
+                    .inputs {
+
+                        .pretty {
+
+                            label {
+                                color: $color-orangedark;
+                            }
+    
+                            .state label:before {
+                                border-color: $color-orangedark;
+                            }
+
+                            input:checked~.state label:after {
+                                background-color: $color-orangedark!important;
+                            }
+    
+                        }
+
+                        .field {
+    
+                            input {
+                                border-color: $color-orangedark;
+                            }
+
+                        }
+    
+                    }
+
+                    #order__calendar {
+    
+                        .-selected- {
+                            background-color: $color-orangedark;
+                            color: white;
+                        }
+
+                        .datepicker {
+                            border-color: $color-orangedark;
+                        }
+
+                        .datepicker--nav {
+                            border-bottom-color: $color-orange;
+
+                            path { 
+                                stroke: $color-orange;
+                            }
+
+                        }
+
+                    }
+
+                    .hours {
+
+                        input {
+                            border-color: $color-orangedark;
+                        }
+
+                    }
+    
+                }
+
+            }
+
+            &.blue {
+
+                .card-header {
+                    background-color: $color-bluedark;
+                }
+
+                .card-body {
+
+                    * {
+                        color: $color-bluedark;
+                    }
+    
+                    .inputs {
+
+                        .pretty {
+
+                            label {
+                                color: $color-bluedark;
+                            }
+    
+                            .state label:before {
+                                border-color: $color-bluedark;
+                            }
+
+                            input:checked~.state label:after {
+                                background-color: $color-bluedark!important;
+                            }
+    
+                        }
+
+                        .field {
+    
+                            input {
+                                border-color: $color-bluedark;
+                            }
+
+                        }
+    
+                    }
+
+                    #order__calendar {
+    
+                        .-selected- {
+                            background-color: $color-bluedark;
+                            color: white;
+                        }
+
+                        .datepicker {
+                            border-color: $color-bluedark;
+                        }
+
+                        .datepicker--nav {
+                            border-bottom-color: $color-blue;
+
+                            path { 
+                                stroke: $color-blue;
+                            }
+
+                        }
+
+                    }
+
+                    .hours {
+
+                        input {
+                            border-color: $color-bluedark;
+                        }
+
+                    }
+    
+                }
+
+            }
+
+            &.green {
+
+                .card-header {
+                    background-color: $color-greendark;
+                }
+
+                .card-body {
+
+                    * {
+                        color: $color-greendark;
+                    }
+    
+                    .inputs {
+
+                        .pretty {
+
+                            label {
+                                color: $color-greendark;
+                            }
+    
+                            .state label:before {
+                                border-color: $color-greendark;
+                            }
+
+                            input:checked~.state label:after {
+                                background-color: $color-greendark!important;
+                            }
+    
+                        }
+
+                        .field {
+    
+                            input {
+                                border-color: $color-greendark;
+                            }
+
+                        }
+    
+                    }
+
+                    #order__calendar {
+    
+                        .-selected- {
+                            background-color: $color-greendark;
+                            color: white;
+                        }
+
+                        .datepicker {
+                            border-color: $color-greendark;
+                        }
+
+                        .datepicker--nav {
+                            border-bottom-color: $color-green;
+
+                            path { 
+                                stroke: $color-green;
+                            }
+
+                        }
+
+                    }
+
+                    .hours {
+
+                        input {
+                            border-color: $color-greendark;
+                        }
+
+                    }
+    
+                }
+
+            }
+
         }
 
     }
