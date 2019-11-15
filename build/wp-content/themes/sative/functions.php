@@ -201,9 +201,9 @@ function wp_bootstrap_starter_scripts() {
     // if(get_theme_mod( 'preset_style_setting' ) === 'robotoslab-roboto') {
     //     wp_enqueue_style( 'wp-bootstrap-starter-robotoslab-roboto', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:300,300i,400,400i,500,700,700i' );
     // }
-    if(get_theme_mod( 'preset_style_setting' ) && get_theme_mod( 'preset_style_setting' ) !== 'default') {
-        wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
-    }
+    // if(get_theme_mod( 'preset_style_setting' ) && get_theme_mod( 'preset_style_setting' ) !== 'default') {
+    //     wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
+    // }
     //Color Scheme
     /*if(get_theme_mod( 'preset_color_scheme_setting' ) && get_theme_mod( 'preset_color_scheme_setting' ) !== 'default') {
         wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_color_scheme_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/'.get_theme_mod( 'preset_color_scheme_setting' ).'.css', false, '' );
@@ -300,4 +300,33 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
  */
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
+}
+
+function addToCartButton()
+{
+    //global $woocommerce;
+    $attributes = [
+        'attribute_pa_kalorycznosc' => $_POST['calories'],
+        'attribute_pa_ilosc-posilkow' => $_POST['meals']
+    ];
+    $variation_id = find_matching_product_variation_id($_POST['productID'], $attributes);
+    //var_dump($_POST['productID']);
+    WC()->cart->add_to_cart( $_POST['productID'], $_POST['quantity'], $variation_id, $attributes);
+    //exit( wp_redirect( get_permalink( woocommerce_get_page_id( 'cart' ) ) ) );
+}
+add_action( 'admin_post_my_add_to_cart_button', 'addToCartButton' );
+
+/**
+ * Find matching product variation
+ *
+ * @param $product_id
+ * @param $attributes
+ * @return int
+ */
+function find_matching_product_variation_id($product_id, $attributes)
+{
+    return (new \WC_Product_Data_Store_CPT())->find_matching_product_variation(
+        new \WC_Product($product_id),
+        $attributes
+    );
 }

@@ -136,6 +136,22 @@
             display: flex;
             flex-wrap: wrap;
 
+            .purple {
+                color: $color-purple;
+            }
+
+            .orange {
+                color: $color-orangedark;
+            }
+
+            .green {
+                color: $color-greendark;
+            }
+
+            .blue {
+                color: $color-bluedark;
+            }
+
             ul {
                 margin: 0;
 
@@ -160,7 +176,7 @@
             min-width: 100%;
             flex-basis: calc(100% + 60px);
             padding: 20px 30px;
-            color: white;
+            color: white!important;
             font-weight: 700;
             position: relative;
             text-align: center;
@@ -171,8 +187,24 @@
             transform-origin: center bottom;
 
             &:hover {
-                color: white;
+                color: white!important;
                 transform: scale(1.1);
+            }
+
+            &.purple {
+                background-color: $color-purple;
+            }
+
+            &.orange {
+                background-color: $color-orangedark;
+            }
+
+            &.green {
+                background-color: $color-greendark;
+            }
+
+            &.blue {
+                background-color: $color-bluedark;
             }
 
         }

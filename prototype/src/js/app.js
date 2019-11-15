@@ -220,6 +220,7 @@ $(document).ready(function() {
 			if($orderDO['priceFull']) {
 				$('h5.topay').html('Do zapłaty: <strong>'+$orderDO['priceFull']+'zł</strong>');
 			}
+			$('input[name="meals"]').val($orderDO['mealsNo']);
 			//
 		});
 		
@@ -310,6 +311,7 @@ $(document).ready(function() {
 				$('.btn.next').addClass('disabled');
 			}
 			$order.trigger('refresh.owl.carousel', [1]);
+			$('input[name="quantity"]').val($orderDO['dates'].length);
 		}
 
 		var $addressCheck1 = 0;
@@ -330,9 +332,23 @@ $(document).ready(function() {
 					if($cities[$(this).val()] && $addressCheck2 == 0) {
 						$addressCheck2 = 1;
 						$orderDO['addressZip'] = $(this).val();
-					} else if(!$cities[$(this).val()] && $addressCheck2 > 0) {
+						$(this).tooltip('hide');
+					}  else if($(this).val().length > 5 && !$cities[$(this).val()]) {
 						$addressCheck2 = 0;
 						delete $orderDO['addressZip'];
+						//$(this).parent().append('<span style="color: red;">Niestety nie dowozimy jeszcze do Twojej miejscowości...</span>');
+						$(this).tooltip({
+							placement: 'bottom',
+							html: true,
+							title: 'Niestety nie dowozimy jeszcze do Twojej miejscowości...<br/><a href="/o-nas#mapa"><strong><u>Zobacz gdzie dowozimy</u></strong></a>',
+							trigger: 'manual',
+						});
+						$(this).tooltip('show');
+						break;
+					} else if($(this).val().length < 6 && !$cities[$(this).val()] && $addressCheck2 > 0) {
+						$addressCheck2 = 0;
+						delete $orderDO['addressZip'];
+						$(this).tooltip('hide');
 					}
 					break;
 				case 'addressCity':
@@ -353,6 +369,12 @@ $(document).ready(function() {
 		});
 
 	}
+
+	$('#justAddToCartButton').on('click', function(e) {
+		e.preventDefault();
+		$('#order__form').append('<input type="hidden" name="action" value="my_add_to_cart_button" />');
+		$('#order__form').submit();
+	});
 
 	//slideNext();
 

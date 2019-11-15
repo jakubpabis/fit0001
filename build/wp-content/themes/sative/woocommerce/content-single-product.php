@@ -46,6 +46,7 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
 $attributes = array();
 $vars = array();
 $cost = array();
@@ -69,11 +70,13 @@ if($product->is_type('variable')){
 		$i++;
 	}
 	//var_dump($variationsArr);
+	
 }
 ?>
 <script defer>
 	$variationsArr = <?= json_encode($variationsArr); ?>;
-	console.log();
+	$productID = <?= json_encode($product->get_ID()); ?>;
+	console.log($productID);
 </script>
 
 <header class="header header__diet" style="border-color: <?= get_field('color', $product->get_ID()); ?>">
@@ -117,7 +120,8 @@ if($product->is_type('variable')){
 				</h2>
 			</div>
 			<div class="col-lg-6">
-				<form id="order__form" action="" class="diets__order-form">
+				<form id="order__form" class="diets__order-form" action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+					<input type="hidden" name="productID" value="<?= $product->get_ID(); ?>">
 					<div class="owl-carousel order owl-theme">
 						<div class="diets__order-card <?= $color; ?>" data-no="1">
 							<div class="card-header">
@@ -199,6 +203,7 @@ if($product->is_type('variable')){
 							</div>
 							<div class="card-body">
 								<div id="order__calendar"></div>
+								<input type="hidden" name="quantity">
 								<input type="hidden" name="orderDates">
 								<input type="hidden" name="orderDatesHelper">
 								<h5>
@@ -246,11 +251,11 @@ if($product->is_type('variable')){
 							</div>
 							<div class="card-body">
 								<div class="btns">
-									<a href="" class="btn btn__full <?= $color; ?>">
+									<a href="#" id="buyNowButton" class="btn btn__full <?= $color; ?>">
 										Zamów teraz
 									</a>
 									<small>lub</small>
-									<a href="" class="btn btn__border <?= $color; ?>">Dodaj do koszyka</a>
+									<a href="#" id="justAddToCartButton" class="btn btn__border <?= $color; ?>">Dodaj do koszyka</a>
 									<small>i kontynuuj zamówienie</small>
 								</div>
 							</div>

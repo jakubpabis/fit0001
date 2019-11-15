@@ -30,19 +30,38 @@ $products = wc_get_products( array(
 
 <section class="diets">
     <div class="container">
-        <?php foreach($products as $product) : ?>
+        <?php foreach($products as $product) : 
+            
+            $colorCode = get_field('color', $product->get_ID()); 
+            $color = '';
+            switch($colorCode) {
+                case strtolower('#501B73'):
+                    $color = 'purple';
+                    break;
+                case strtolower('#FF8A00'):
+                    $color = 'orange';
+                    break;
+                case strtolower('#00A3FF'):
+                    $color = 'blue';
+                    break;
+                case strtolower('#A8CE38'):
+                    $color = 'green';
+                    break;
+            }
+            
+        ?>
             <div class="row diets__row">
                 <div class="col-12">
                     <div class="row align-items-stretch diets__product">
                         <div class="col-lg-6 diets__product-text">
                             <div class="content">
-                                <h2 style="color: <?= get_field('color', $product->get_ID()); ?>">
+                                <h2 class="<?= $color; ?>">
                                     <?= $product->get_title(); ?>
                                 </h2>
                                 <?= get_the_content('', '', $product->get_ID()); ?>
                             </div>
-                            <a href="<?= get_the_permalink($product->get_ID()); ?>" class="diets__product-btn" style="background-color: <?= get_field('color', $product->get_ID()); ?>">
-                                Zamów swoją dietę już teraz!
+                            <a href="<?= get_the_permalink($product->get_ID()); ?>" class="diets__product-btn <?= $color; ?>">
+                                Zamów swoją dietę już dziś!
                             </a>
                         </div>
                         <div class="col-lg-6 diets__product-image">
