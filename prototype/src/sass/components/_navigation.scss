@@ -112,4 +112,72 @@
 
     }
 
+    &+article {
+        padding-top: 240px;
+        padding-bottom: 200px;
+    }
+
+}
+
+.woocommerce-notices-wrapper {
+    overflow: hidden;
+    position: fixed;
+    z-index: 9999999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .5);
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
+    display: none;
+
+    &.vis {
+        display: flex;
+    }
+
+    > div {
+        overflow: hidden;
+        border-radius: 10px;
+        padding: 2em 3em 2em 5em;
+
+        &:before {
+            top: 2em;
+            left: 2.5em;
+        }
+
+        .button {
+            margin-left: 50px;
+        }
+
+    }
+
+}
+
+body.woocommerce-cart,
+body.woocommerce-checkout {
+
+    .main-navigation {
+
+        * {
+            color: $color-primary!important;
+        }
+
+        .main-menu {
+    
+            li {
+    
+                a {
+    
+                    &:after {
+                        background-color: $color-primary;
+                    }
+                
+                }
+            
+            }
+        
+        }
+
+    }
+
 }

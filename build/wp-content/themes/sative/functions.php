@@ -81,21 +81,21 @@ add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );
  * Add Welcome message to dashboard
  */
 function wp_bootstrap_starter_reminder(){
-        $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
+    $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
 
-            if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
-                    esc_url( $theme_page_url )
-                );
+    if(!get_option( 'triggered_welcomet')){
+        $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
+            esc_url( $theme_page_url )
+        );
 
-                printf(
-                    '<div class="notice is-dismissible" style="background-color: #6C2EB9; color: #fff; border-left: none;">
-                        <p>%1$s</p>
-                    </div>',
-                    $message
-                );
-                add_option( 'triggered_welcomet', '1', '', 'yes' );
-            }
+        printf(
+            '<div class="notice is-dismissible" style="background-color: #6C2EB9; color: #fff; border-left: none;">
+                <p>%1$s</p>
+            </div>',
+            $message
+        );
+        add_option( 'triggered_welcomet', '1', '', 'yes' );
+    }
 
 }
 add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
@@ -173,10 +173,10 @@ function wp_bootstrap_starter_scripts() {
 	// load bootstrap css
 	// load AItheme styles
 	// load WP Bootstrap Starter styles
-	wp_enqueue_style( 'wp-bootstrap-starter-style', get_stylesheet_uri() );
-    if(get_theme_mod( 'theme_option_setting' ) && get_theme_mod( 'theme_option_setting' ) !== 'default') {
-        wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
-    }
+	// wp_enqueue_style( 'wp-bootstrap-starter-style', get_stylesheet_uri() );
+    // if(get_theme_mod( 'theme_option_setting' ) && get_theme_mod( 'theme_option_setting' ) !== 'default') {
+    //     wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
+    // }
     // if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
     //     wp_enqueue_style( 'wp-bootstrap-starter-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
     // }
@@ -211,11 +211,11 @@ function wp_bootstrap_starter_scripts() {
         wp_enqueue_style( 'wp-bootstrap-starter-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
     }*/
 
-	wp_enqueue_script('jquery');
+	// wp_enqueue_script('jquery');
 
     // Internet Explorer HTML5 support
-    wp_enqueue_script( 'html5hiv',get_template_directory_uri().'/inc/assets/js/html5.js', array(), '3.7.0', false );
-    wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
+    // wp_enqueue_script( 'html5hiv',get_template_directory_uri().'/inc/assets/js/html5.js', array(), '3.7.0', false );
+    // wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
 	// load bootstrap js
     // if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
@@ -302,19 +302,20 @@ if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
 
-function addToCartButton()
-{
-    //global $woocommerce;
-    $attributes = [
-        'attribute_pa_kalorycznosc' => $_POST['calories'],
-        'attribute_pa_ilosc-posilkow' => $_POST['meals']
-    ];
-    $variation_id = find_matching_product_variation_id($_POST['productID'], $attributes);
-    //var_dump($_POST['productID']);
-    WC()->cart->add_to_cart( $_POST['productID'], $_POST['quantity'], $variation_id, $attributes);
-    //exit( wp_redirect( get_permalink( woocommerce_get_page_id( 'cart' ) ) ) );
-}
-add_action( 'admin_post_my_add_to_cart_button', 'addToCartButton' );
+// function addToCartButton()
+// {
+//     global $woocommerce;
+//     $attributes = [
+//         'attribute_pa_kalorycznosc' => $_POST['calories'],
+//         'attribute_pa_ilosc-posilkow' => $_POST['meals']
+//     ];
+//     $variation_id = find_matching_product_variation_id($_POST['productID'], $attributes);
+//     //var_dump($_POST['productID']);
+//     WC()->frontend_includes();
+//     WC()->cart->add_to_cart( $_POST['productID'], $_POST['quantity'], $variation_id, $attributes);
+//     //exit( wp_redirect( get_permalink( woocommerce_get_page_id( 'cart' ) ) ) );
+// }
+// add_action( 'admin_post_my_add_to_cart_button', 'addToCartButton' );
 
 /**
  * Find matching product variation
@@ -329,4 +330,12 @@ function find_matching_product_variation_id($product_id, $attributes)
         new \WC_Product($product_id),
         $attributes
     );
+}
+
+add_filter( 'woocommerce_cart_item_quantity', 'wc_cart_item_quantity', 10, 3 );
+function wc_cart_item_quantity( $product_quantity, $cart_item_key, $cart_item ){
+    if( is_cart() ){
+        $product_quantity = sprintf( '%2$s <input type="hidden" name="cart[%1$s][qty]" value="%2$s" />', $cart_item_key, $cart_item['quantity'] );
+    }
+    return $product_quantity;
 }

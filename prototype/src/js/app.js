@@ -52,13 +52,21 @@ var $cities = {
 	)
 };
 
+var $orderDO;
+
 if(typeof($variationsArr) != "undefined" && $variationsArr !== null) {
-    var $orderDO = {
+    $orderDO = {
 		variations: $variationsArr,
 		mealsNo: 0,
 		mealsPerc: 0
 	}
 }
+
+if(typeof($variationsArrAll) != "undefined" && $variationsArrAll !== null) {
+    $orderDO['all'] = $variationsArrAll;
+}
+
+
 
 function slideTo($el)
 {
@@ -372,8 +380,46 @@ $(document).ready(function() {
 
 	$('#justAddToCartButton').on('click', function(e) {
 		e.preventDefault();
-		$('#order__form').append('<input type="hidden" name="action" value="my_add_to_cart_button" />');
-		$('#order__form').submit();
+		var $base = '?add-to-cart=';
+		var $productID = $('input[name="productID"]').val();
+		var $quantity = $('input[name="quantity"]').val();
+		$orderDO['productID'] = $productID;
+
+		for(var i=0; i<$orderDO['all'].length; i++) {
+			var $calories = $orderDO['all'][i]['attributes']['attribute_pa_kalorycznosc'];
+			var $servings = $orderDO['all'][i]['attributes']['attribute_pa_ilosc-posilkow'];
+			//console.log($calories);
+			//console.log($servings);
+			if(parseInt($calories) == $orderDO['caloriesSet'] && parseInt($servings) == $orderDO['mealsNo']) {
+				var $variationID = $orderDO['all'][i]['variation_id'];
+				$orderDO['variationID'] = $variationID;
+				$orderDO['attrSelected'] = {
+					'attribute_pa_kalorycznosc': $orderDO['caloriesSet'],
+					'attribute_pa_ilosc-posilkow': $orderDO['mealsNo']
+				};
+				var $variationsString = '&attribute_pa_kalorycznosc='+$orderDO['caloriesSet']+'&attribute_pa_ilosc-posilkow='+$orderDO['mealsNo'];
+				break;
+			}
+		}
+		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString;
+
+		console.log($orderDO);
+
+		window.location.href = $finalURL;
+
+		//$('#order__form').append('<input type="hidden" name="action" value="my_add_to_cart_button" />');
+		//$('#order__form').submit();
+	});
+
+	var $wooNotice = $(document).find('.woocommerce-notices-wrapper');
+	if(!$wooNotice.is(':empty')) {
+		$('.woocommerce-notices-wrapper').addClass('vis');
+	}
+
+	$(document).on('change', '.woocommerce-notices-wrapper', function() {
+		if(!$(this).is(':empty')) {
+			$(this).addClass('vis');
+		}
 	});
 
 	//slideNext();

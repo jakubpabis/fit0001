@@ -70,13 +70,13 @@ if($product->is_type('variable')){
 		$i++;
 	}
 	//var_dump($variationsArr);
-	
 }
 ?>
 <script defer>
 	$variationsArr = <?= json_encode($variationsArr); ?>;
-	$productID = <?= json_encode($product->get_ID()); ?>;
-	console.log($productID);
+	$variationsArrAll = <?= json_encode($product->get_available_variations()); ?>;
+	//$productID = <?= json_encode($product->get_ID()); ?>;
+	console.log($variationsArrAll);
 </script>
 
 <header class="header header__diet" style="border-color: <?= get_field('color', $product->get_ID()); ?>">
