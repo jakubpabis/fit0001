@@ -49,7 +49,7 @@ get_header();
                     <div class="col-lg-5 col-md-6 col-sm-10 col-12 diets__home-card">
                         <div class="content">
                             <div class="img">
-                                <img src="<?= get_sub_field('image')['sizes']['medium_large']; ?>" alt="" class="lazy bg-cover">
+                                <img src="<?= get_sub_field('image')['sizes']['woocommerce_single']; ?>" alt="" class="lazy bg-cover">
                             </div>
                             <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
                                 <h4>
