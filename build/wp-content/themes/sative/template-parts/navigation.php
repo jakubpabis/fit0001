@@ -1,14 +1,14 @@
 <nav class="main-navigation">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-3">
+            <div class="col-sm-3">
                 <a href="/" class="logo">
                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
                         <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
                     </object>
                 </a>
             </div>
-            <div class="col-lg-9">
+            <div class="col-sm-9">
                 <div class="row">
                     <div class="col-12">
                         <?php
