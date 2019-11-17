@@ -13,7 +13,13 @@ $products = wc_get_products( array(
 //var_dump($prod->get_variation_attributes()['pa_kalorycznosc']); ?>
 
 <header class="header header__diets">
-    <img class="bg-cover-abs lazy" data-src="<?= get_field('header_image')['url']; ?>" alt="">
+    <picture class="bg-cover-abs">
+        <source class="lazyset bg-cover-abs" media="(min-width: 1600px)" data-srcset="<?= get_field('header_image')['url']; ?>">
+        <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_field('header_image')['sizes']['1536x1536']; ?>">
+        <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_field('header_image')['sizes']['large']; ?>">
+        <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_field('header_image')['sizes']['medium_large']; ?>">
+        <img class="lazy bg-cover-abs" data-src="<?= get_field('header_image')['url']; ?>" alt="">
+    </picture>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 col-12">
@@ -50,10 +56,10 @@ $products = wc_get_products( array(
             }
             
         ?>
-            <div class="row diets__row">
-                <div class="col-12">
+            <div class="row diets__row justify-content-center">
+                <div class="col-lg-12 col-md-10 col-12">
                     <div class="row align-items-stretch diets__product">
-                        <div class="col-lg-6 diets__product-text">
+                        <div class="col-lg-6 col-12 diets__product-text">
                             <div class="content">
                                 <h2 class="<?= $color; ?>">
                                     <?= $product->get_title(); ?>
@@ -64,8 +70,8 @@ $products = wc_get_products( array(
                                 Zamów swoją dietę już dziś!
                             </a>
                         </div>
-                        <div class="col-lg-6 diets__product-image">
-                            <img data-src="<?= get_the_post_thumbnail_url($product->get_ID()); ?>" alt="" class="lazy bg-cover">
+                        <div class="col-lg-6 col-12 diets__product-image">
+                            <img data-src="<?= get_the_post_thumbnail_url($product->get_ID(), 'large'); ?>" alt="" class="lazy bg-cover">
                         </div>
                     </div>
                 </div>

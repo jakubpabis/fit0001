@@ -121,6 +121,22 @@
             }
 
         }
+
+        @media(max-width: 991px) {
+
+            .diets__product-text {
+                order: 100!important;
+            }
+
+            .diets__product-image {
+                order: 1!important;
+            }
+
+        }
+
+        @media(max-width: 575px) {
+            margin: 0 0 100px 0!important;
+        }
             
     }
 

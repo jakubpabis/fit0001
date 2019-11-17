@@ -80,7 +80,13 @@ if($product->is_type('variable')){
 </script>
 
 <header class="header header__diet" style="border-color: <?= get_field('color', $product->get_ID()); ?>">
-    <img class="bg-cover-abs lazy" data-src="<?= get_the_post_thumbnail_url($product->get_ID()); ?>" alt="">
+	<picture class="bg-cover-abs">
+        <source class="lazyset bg-cover-abs" media="(min-width: 1600px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID()); ?>">
+        <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID(), '1536x1536'); ?>">
+        <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID(), 'large'); ?>">
+        <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID(), 'medium_large'); ?>">
+        <img class="lazy bg-cover-abs" data-src="<?= get_the_post_thumbnail_url($product->get_ID()); ?>" alt="">
+    </picture>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 col-12">
