@@ -46,7 +46,7 @@ get_header();
         <?php if( have_rows('diets') ): ?>
             <div class="row justify-content-center align-items-stretch">
                 <?php while ( have_rows('diets') ) : the_row(); ?>
-                    <div class="col-lg-5 diets__home-card">
+                    <div class="col-lg-5 col-md-6 col-sm-10 col-12 diets__home-card">
                         <div class="content">
                             <div class="img">
                                 <img src="<?= get_sub_field('image')['sizes']['medium_large']; ?>" alt="" class="lazy bg-cover">
