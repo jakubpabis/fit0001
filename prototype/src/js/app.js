@@ -378,9 +378,13 @@ $(document).ready(function() {
 
 	}
 
-	$('#justAddToCartButton').on('click', function(e) {
+	$('#justAddToCartButton, #buyNowButton').on('click', function(e) {
 		e.preventDefault();
-		var $base = '?add-to-cart=';
+		if($(this).attr('id') == 'buyNowButton') {
+			var $base = 'zamowienie/?add-to-cart=';
+		} else {
+			var $base = '?add-to-cart=';
+		}
 		var $productID = $('input[name="productID"]').val();
 		var $quantity = $('input[name="quantity"]').val();
 		$orderDO['productID'] = $productID;
