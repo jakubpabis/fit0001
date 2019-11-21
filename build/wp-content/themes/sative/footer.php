@@ -13,7 +13,7 @@
             <footer class="footer">
                 <div class="footer__top">
                     <div class="container">
-                        <div class="row justify-content-center">
+                        <div class="row">
                             <div class="col-lg-3">
                                 <a href="/" class="logo">
                                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
