@@ -8,7 +8,7 @@
     position: relative;
 
     &__top {
-        margin-top: 60px;
+        margin-top: 50px;
         color: $color-secondary;
 
         * {
@@ -19,6 +19,17 @@
             max-width: 164px;
             display: block;
         }    
+
+        .text-right {
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+            }
+
+        }
 
     }
 
