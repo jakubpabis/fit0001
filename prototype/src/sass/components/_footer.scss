@@ -7,6 +7,15 @@
     display: block;
     position: relative;
 
+    @media(max-width: 575px) {
+        text-align: center!important;
+
+        * {
+            text-align: center!important;
+        }
+
+    }
+
     &__top {
         margin-top: 50px;
         color: $color-secondary;
