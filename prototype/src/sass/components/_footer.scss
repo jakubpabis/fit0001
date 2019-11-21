@@ -8,6 +8,12 @@
     position: relative;
 
     &__top {
+        margin-top: 60px;
+        color: $color-secondary;
+
+        * {
+            color: $color-secondary;
+        }
 
         .logo {
             max-width: 164px;
