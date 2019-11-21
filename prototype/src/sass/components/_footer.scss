@@ -7,6 +7,10 @@
     display: block;
     position: relative;
 
+    .logo {
+        max-width: 164px;
+    }
+
     &__bottom {
         margin-top: 60px;
         color: $color-secondary;
