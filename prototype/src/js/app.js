@@ -212,7 +212,7 @@ $(document).ready(function() {
 				var $arr = $orderDO['variations'][$orderDO['caloriesSet']];
 				$price = $arr[$orderDO['mealsNo']];
 				$orderDO['pricePerDay'] = $arr[$orderDO['mealsNo']];
-				$('h6.result').html('Cena za dzień: <strong>'+$orderDO['pricePerDay']+' zł</strong>,<br/>Kaloryczność: <strong>'+$orderDO['caloriesSet'] * $orderDO['mealsPerc'] / 100+' kcal</strong>');
+				$('h6.result').html('Cena za dzień: <strong>'+$orderDO['pricePerDay']+' zł</strong>,<br/>Kaloryczność: ok. <strong>'+$orderDO['caloriesSet'] * $orderDO['mealsPerc'] / 100+' kcal</strong>');
 				$order.trigger('refresh.owl.carousel', [1]);
 				$('.btn.next').removeClass('disabled');
 			} else {

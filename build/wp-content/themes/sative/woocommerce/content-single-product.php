@@ -208,6 +208,10 @@ if($product->is_type('variable')){
 								<h3>Wybierz kiedy chcesz otrzymywać posiłki</h3>
 							</div>
 							<div class="card-body">
+								<p>
+									Na przygotowanie Twoich posiłków potrzebujemy <u>dwóch dni</u>.<br/>
+									Ten czas pozwala nam na dokładne określenie zapotrzebowania na konkretne, świeże produkty.
+								</p>
 								<div id="order__calendar"></div>
 								<input type="hidden" name="quantity">
 								<input type="hidden" name="orderDates">
