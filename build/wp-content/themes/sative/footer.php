@@ -17,7 +17,7 @@
                 <div class="footer__bottom">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-12 text-center">
+                            <div class="col-lg-3">
                                 <a href="/" class="logo">
                                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
                                         <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
