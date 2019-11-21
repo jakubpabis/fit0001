@@ -14,19 +14,19 @@
                 <div class="footer__top">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-xl-3 col-lg-4 col-md-5">
+                            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
                                 <a href="/" class="logo">
                                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
                                         <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
                                     </object>
                                 </a>
                             </div>
-                            <div class="col-lg-4 col-md-5 text-right">
+                            <div class="col-lg-4 col-md-5 col-sm-6 col-12 text-right">
 
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-lg-4 col-md-5">
+                            <div class="col-lg-4 col-md-5 col-sm-6 col-12">
                                 <h4>Kontakt</h4>
                                 <?php
                                     if(is_active_sidebar('footer-1')){
@@ -34,7 +34,7 @@
                                     }
                                 ?>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-md-5 text-right">
+                            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12 text-right">
                                 <h4>Mapa strony</h4>
                                 <?php
                                     wp_nav_menu(array(
@@ -56,10 +56,10 @@
                 <div class="footer__bottom">
                     <div class="container">
                         <div class="row justify-content-center align-items-center">
-                            <div class="col-lg-4 col-md-5 col-auto">
+                            <div class="col-lg-4 col-md-5 col-sm-6 col-12 col-auto">
                                 Copyright &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-md-5 col-auto text-right">
+                            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12 col-auto text-right">
                                 <a href="https://www.sative.co.uk" target="_blank">
                                     Made with <i class="fas fa-heart"></i> by <strong>SATIVE</strong>
                                 </a>
