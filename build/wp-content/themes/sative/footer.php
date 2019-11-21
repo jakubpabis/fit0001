@@ -56,10 +56,10 @@
                 <div class="footer__bottom">
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
-                            <div class="col-auto">
+                            <div class="col-lg-4 col-auto">
                                 Copyright &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-lg-4 col-auto">
                                 <a href="https://www.sative.co.uk" target="_blank">
                                     Made with <i class="fas fa-heart"></i> by <strong>SATIVE</strong>
                                 </a>
