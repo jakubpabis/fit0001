@@ -46,6 +46,7 @@ function wp_bootstrap_starter_setup() {
 	register_nav_menus( array(
         'primary' => esc_html__( 'Primary', 'wp-bootstrap-starter' ),
         'upper' => esc_html__( 'Upper', 'wp-bootstrap-starter' ),
+        'help' => esc_html__( 'Help', 'wp-bootstrap-starter' ),
 	) );
 
 	/*
