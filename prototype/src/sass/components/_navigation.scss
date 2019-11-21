@@ -197,7 +197,7 @@ body.page-template-default {
     .main-navigation {
 
         * {
-            color: $color-primary!important;
+            color: $color-secondary!important;
         }
 
         .main-menu {
@@ -207,7 +207,7 @@ body.page-template-default {
                 a {
     
                     &:after {
-                        background-color: $color-primary;
+                        background-color: $color-secondary;
                     }
                 
                 }
