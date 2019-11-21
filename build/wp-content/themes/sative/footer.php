@@ -21,12 +21,12 @@
                                     </object>
                                 </a>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-md-5 text-right">
+                            <div class="col-lg-4 col-md-5 text-right">
 
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-xl-3 col-lg-4 col-md-5">
+                            <div class="col-lg-4 col-md-5">
                                 <h4>Kontakt</h4>
                                 <?php
                                     if(is_active_sidebar('footer-1')){
@@ -56,7 +56,7 @@
                 <div class="footer__bottom">
                     <div class="container">
                         <div class="row justify-content-center align-items-center">
-                            <div class="col-xl-3 col-lg-4 col-md-5 col-auto">
+                            <div class="col-lg-4 col-md-5 col-auto">
                                 Copyright &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-5 col-auto text-right">
