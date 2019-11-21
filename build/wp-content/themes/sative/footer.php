@@ -25,6 +25,10 @@
 
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="footer__middle">
+                    <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-4 col-md-5 col-sm-6 col-12">
                                 <h4>Kontakt</h4>
