@@ -27,6 +27,11 @@
         .logo {
             max-width: 164px;
             display: block;
+
+            @media(max-width: 575px) {
+                margin: 0 auto;
+            }
+
         }    
 
     }
