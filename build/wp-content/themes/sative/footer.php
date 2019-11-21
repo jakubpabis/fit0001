@@ -13,13 +13,16 @@
             <footer class="footer">
                 <div class="footer__top">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4">
                                 <a href="/" class="logo">
                                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
                                         <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
                                     </object>
                                 </a>
+                            </div>
+                            <div class="col-lg-4">
+
                             </div>
                         </div>
                         <div class="row justify-content-center">
@@ -35,28 +38,12 @@
                                 <h4>Mapa strony</h4>
                                 <?php
                                     wp_nav_menu(array(
-                                        'theme_location'    => 'primary',
+                                        'theme_location'    => 'footer',
                                         'container'       => '',
                                         'container_id'    => '',
                                         'container_class' => '',
                                         'menu_id'         => false,
-                                        'menu_class'      => 'main-menu',
-                                        'depth'           => 2,
-                                        'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                                        'walker'          => new wp_bootstrap_navwalker()
-                                    ));
-                                ?>
-                            </div>
-                            <div class="col-lg-4">
-                                <h4>Pomoc</h4>
-                                <?php
-                                    wp_nav_menu(array(
-                                        'theme_location'    => 'help',
-                                        'container'       => '',
-                                        'container_id'    => '',
-                                        'container_class' => '',
-                                        'menu_id'         => false,
-                                        'menu_class'      => 'help-menu',
+                                        'menu_class'      => 'footer-menu',
                                         'depth'           => 2,
                                         'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                                         'walker'          => new wp_bootstrap_navwalker()
