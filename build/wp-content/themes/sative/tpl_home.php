@@ -65,10 +65,10 @@ get_header();
                             </div>
                             <div class="text">
                                 <?= get_sub_field('text'); ?>
-                                <div class="btns">
-                                    <a class="more" style="color: <?= get_sub_field('color'); ?>" href="<?= get_sub_field('more_link')['url']; ?>"><?= get_sub_field('more_link')['title']; ?></a>
-                                    <a class="btn btn__full slim nocolor" style="background-color: <?= get_sub_field('color'); ?>" href="<?= get_sub_field('buy_link')['url']; ?>"><?= get_sub_field('buy_link')['title']; ?></a>
-                                </div>
+                            </div>
+                            <div class="btns">
+                                <a class="more" style="color: <?= get_sub_field('color'); ?>" href="<?= get_sub_field('more_link')['url']; ?>"><?= get_sub_field('more_link')['title']; ?></a>
+                                <a class="btn btn__full slim nocolor" style="background-color: <?= get_sub_field('color'); ?>" href="<?= get_sub_field('buy_link')['url']; ?>"><?= get_sub_field('buy_link')['title']; ?></a>
                             </div>
                         </div>
                     </div>
