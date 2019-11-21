@@ -25,6 +25,11 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-4">
                                 <h4>Kontakt</h4>
+                                <?php
+                                    if(is_active_sidebar('footer-1')){
+                                        dynamic_sidebar('footer-1');
+                                    }
+                                ?>
                             </div>
                             <div class="col-lg-4">
                                 <h4>Mapa strony</h4>
