@@ -7,9 +7,13 @@
     display: block;
     position: relative;
 
-    .logo {
-        max-width: 164px;
-        display: block;
+    &__top {
+
+        .logo {
+            max-width: 164px;
+            display: block;
+        }    
+
     }
 
     &__bottom {
