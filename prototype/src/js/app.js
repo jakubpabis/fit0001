@@ -416,9 +416,9 @@ $(document).ready(function() {
 			}
 		}
 		var $dates = $orderDO['dates'].join(';');
-		$dates.replace('/', '-');
 		var $meals = $orderDO['meals'].join(';');
-		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates+'&meals='+$meals;
+		var $hour = $orderDO['hour'].replace(':', '.');
+		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates+'&hour='+$hour+'&meals='+$meals;
 
 		console.log($orderDO);
 
