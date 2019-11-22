@@ -340,3 +340,33 @@ function wc_cart_item_quantity( $product_quantity, $cart_item_key, $cart_item ){
     }
     return $product_quantity;
 }
+
+// Add custom note as custom cart item data
+add_filter( 'woocommerce_add_cart_item_data', 'get_custom_product_note', 30, 2 );
+function get_custom_product_note( $cart_item_data, $product_id ){
+    if ( isset($_GET['dates']) && ! empty($_GET['dates']) ) {
+        $cart_item_data['custom_dates'] = sanitize_text_field( $_GET['dates'] );
+    }
+    return $cart_item_data;
+}
+
+
+// Display note in cart and checkout pages as cart item data - Optional
+add_filter( 'woocommerce_get_item_data', 'display_custom_item_data', 10, 2 );
+function display_custom_item_data( $cart_item_data, $cart_item ) {
+    if ( isset( $cart_item['custom_dates'] ) ){
+        $cart_item_data[] = array(
+            'name' => "Dni dostawy",
+            'value' => $cart_item['custom_dates'],
+        );
+    }
+    return $cart_item_data;
+}
+
+// Save and display product note in orders and email notifications (everywhere)
+add_action( 'woocommerce_checkout_create_order_line_item', 'add_custom_note_order_item_meta', 20, 4 );
+function add_custom_note_order_item_meta( $item, $cart_item_key, $values, $order ) {
+    if ( isset( $values['custom_note'] ) ){
+        $item->update_meta_data( 'Dni dostawy',  $values['custom_dates'] );
+    }
+}
