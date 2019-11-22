@@ -27,8 +27,8 @@ get_header();
 
 <section class="about__section">
     <div class="container">
-        <?php if( have_rows('diets') ): ?>
-            <?php while ( have_rows('diets') ) : the_row(); ?>
+        <?php if( have_rows('about_sections') ): ?>
+            <?php while ( have_rows('about_sections') ) : the_row(); ?>
                 <div class="row justify-content-center about__section-item">
                     <div class="col-lg-6 about__section-img">
                         <div class="img">
