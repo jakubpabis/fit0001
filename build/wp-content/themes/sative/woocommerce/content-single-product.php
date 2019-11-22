@@ -160,7 +160,7 @@ if($product->is_type('variable')){
 									<input type="hidden" name="meals" value="3">
 									<div class="input">
 										<div class="pretty p-default p-curve">
-											<input type="checkbox" name="mealType" value="sniadanie1" data-perc="25"/>
+											<input type="checkbox" name="mealType" value="Śniadanie" data-perc="25"/>
 											<div class="state">
 												<label>Śniadanie</label>
 											</div>
@@ -168,7 +168,7 @@ if($product->is_type('variable')){
 									</div>
 									<div class="input">
 										<div class="pretty p-default p-curve">
-											<input type="checkbox" name="mealType" value="sniadanie2" data-perc="15"/>
+											<input type="checkbox" name="mealType" value="II Śniadanie" data-perc="15"/>
 											<div class="state">
 												<label>II Śniadanie</label>
 											</div>
@@ -176,7 +176,7 @@ if($product->is_type('variable')){
 									</div>
 									<div class="input">
 										<div class="pretty p-default p-curve">
-											<input type="checkbox" name="mealType" value="obiad" data-perc="30"/>
+											<input type="checkbox" name="mealType" value="Obiad" data-perc="30"/>
 											<div class="state">
 												<label>Obiad</label>
 											</div>
@@ -184,7 +184,7 @@ if($product->is_type('variable')){
 									</div>
 									<div class="input">
 										<div class="pretty p-default p-curve">
-											<input type="checkbox" name="mealType" value="podwieczorek" data-perc="15"/>
+											<input type="checkbox" name="mealType" value="Podwieczorek" data-perc="15"/>
 											<div class="state">
 												<label>Podwieczorek</label>
 											</div>
@@ -192,7 +192,7 @@ if($product->is_type('variable')){
 									</div>
 									<div class="input">
 										<div class="pretty p-default p-curve">
-											<input type="checkbox" name="mealType" value="kolacja" data-perc="15"/>
+											<input type="checkbox" name="mealType" value="Kolacja" data-perc="15"/>
 											<div class="state">
 												<label>Kolacja</label>
 											</div>
