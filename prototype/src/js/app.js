@@ -417,8 +417,11 @@ $(document).ready(function() {
 		}
 		var $dates = $orderDO['dates'].join(';');
 		var $meals = $orderDO['meals'].join(';');
-		var $hour = $orderDO['hour'];
-		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates+'&meals='+$meals+'&dateshour='+$hour;
+		var $street = $('input[name="addressStreet"]').val();
+		var $house = $('input[name="addressHouse"]').val();
+		var $zip = $('input[name="addressZip"]').val();
+		var $city = $('input[name="addressCity"]').val();
+		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates+'&meals='+$meals+'&dateshour='+$orderDO['hour']+'&addressStreet='+$street+'&addressHouse='+$house+'&addressZip='+$zip+'&addressCity='+$city;
 
 		console.log($orderDO);
 
