@@ -32,10 +32,10 @@ get_header();
                 <div class="row justify-content-center about__section-item">
                     <div class="col-lg-6 about__section-img">
                         <picture class="bg-cover">
-                            <source class="lazyset bg-cover" media="(min-width: 1024px)" data-srcset="<?= get_sub_field('img')['sizes']['1536x1536']; ?>">
-                            <source class="lazyset bg-cover" media="(min-width: 480px)" data-srcset="<?= get_sub_field('img')['sizes']['large']; ?>">
-                            <source class="lazyset bg-cover" media="(min-width: 1px)" data-srcset="<?= get_sub_field('img')['sizes']['medium_large']; ?>">
-                            <img class="lazy bg-cover" data-src="<?= get_sub_field('img')['url']; ?>" alt="">
+                            <source class="lazyset" media="(min-width: 1024px)" data-srcset="<?= get_sub_field('img')['sizes']['1536x1536']; ?>">
+                            <source class="lazyset" media="(min-width: 480px)" data-srcset="<?= get_sub_field('img')['sizes']['large']; ?>">
+                            <source class="lazyset" media="(min-width: 1px)" data-srcset="<?= get_sub_field('img')['sizes']['medium_large']; ?>">
+                            <img class="lazy" data-src="<?= get_sub_field('img')['url']; ?>" alt="">
                         </picture>
                     </div>
                     <div class="col-lg-6 about__section-text">
