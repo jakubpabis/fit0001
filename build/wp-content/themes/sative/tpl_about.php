@@ -41,7 +41,9 @@ get_header();
                         </div>
                     </div>
                     <div class="col-lg-6 about__section-text">
-                        <?= get_sub_field('text'); ?>
+                        <div class="content">
+                            <?= get_sub_field('text'); ?>
+                        </div>
                     </div>
                 </div>
             <?php endwhile; ?>
