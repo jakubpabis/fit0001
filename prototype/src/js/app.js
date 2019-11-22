@@ -405,7 +405,8 @@ $(document).ready(function() {
 				break;
 			}
 		}
-		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString;
+		var $dates = $orderDO['dates'].join(';');
+		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates;
 
 		console.log($orderDO);
 
