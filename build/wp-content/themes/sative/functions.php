@@ -347,6 +347,12 @@ function get_custom_product_note( $cart_item_data, $product_id ){
     if ( isset($_GET['dates']) && ! empty($_GET['dates']) ) {
         $cart_item_data['custom_dates'] = sanitize_text_field( $_GET['dates'] );
     }
+    if ( isset($_GET['hour']) && ! empty($_GET['hour']) ) {
+        $cart_item_data['custom_hour'] = sanitize_text_field( $_GET['hour'] );
+    }
+    if ( isset($_GET['meals']) && ! empty($_GET['meals']) ) {
+        $cart_item_data['custom_meals'] = sanitize_text_field( $_GET['meals'] );
+    }
     return $cart_item_data;
 }
 
@@ -360,13 +366,31 @@ function display_custom_item_data( $cart_item_data, $cart_item ) {
             'value' => $cart_item['custom_dates'],
         );
     }
+    if ( isset( $cart_item['custom_hour'] ) ){
+        $cart_item_data[] = array(
+            'name' => "Godzina dostawy",
+            'value' => $cart_item['custom_hour'],
+        );
+    }
+    if ( isset( $cart_item['custom_meals'] ) ){
+        $cart_item_data[] = array(
+            'name' => "Wybrane posiłki",
+            'value' => $cart_item['custom_meals'],
+        );
+    }
     return $cart_item_data;
 }
 
 // Save and display product note in orders and email notifications (everywhere)
 add_action( 'woocommerce_checkout_create_order_line_item', 'add_custom_note_order_item_meta', 20, 4 );
 function add_custom_note_order_item_meta( $item, $cart_item_key, $values, $order ) {
-    if ( isset( $values['custom_note'] ) ){
+    if ( isset( $values['custom_dates'] ) ){
         $item->update_meta_data( 'Dni dostawy',  $values['custom_dates'] );
+    }
+    if ( isset( $values['custom_hour'] ) ){
+        $item->update_meta_data( 'Godzina dostawy',  $values['custom_hour'] );
+    }
+    if ( isset( $values['custom_meals'] ) ){
+        $item->update_meta_data( 'Wybrane posiłki',  $values['custom_meals'] );
     }
 }
