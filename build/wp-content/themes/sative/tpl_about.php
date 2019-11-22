@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<header class="header header__diets">
+<header class="header header__about">
     <picture class="bg-cover-abs">
         <source class="lazyset bg-cover-abs" media="(min-width: 1600px)" data-srcset="<?= get_the_post_thumbnail_url(); ?>">
         <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_the_post_thumbnail_url('', '1536x1536'); ?>">
