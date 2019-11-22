@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-10">
+			<div class="col-xl-8 col-lg-9">
 		
 				<?php
 				$enable_vc = get_post_meta(get_the_ID(), '_wpb_vc_js_status', true);
