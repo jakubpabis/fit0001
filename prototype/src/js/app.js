@@ -417,7 +417,7 @@ $(document).ready(function() {
 		}
 		var $dates = $orderDO['dates'].join(';');
 		var $meals = $orderDO['meals'].join(';');
-		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates+'&hour='+$orderDO['hour']+'&meals='+$meals;
+		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates;
 
 		console.log($orderDO);
 
