@@ -121,7 +121,7 @@
 }
 
 form.checkout.woocommerce-checkout {
-    
+
 }
 
 .woocommerce-billing-fields__field-wrapper {
@@ -129,9 +129,18 @@ form.checkout.woocommerce-checkout {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    margin: 0 -15px;
 
     .form-row {
         flex-basis: 50%;
+        padding: 15px;
+
+        label,
+        .woocommerce-input-wrapper {
+            width: 100%;
+            display: block;
+        }
+
     }
 
 }
