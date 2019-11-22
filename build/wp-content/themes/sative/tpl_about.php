@@ -33,15 +33,15 @@ get_header();
                     <div class="col-lg-6 about__section-img">
                         <div class="img">
                             <picture class="bg-cover">
-                                <source class="lazyset bg-cover" media="(min-width: 1024px)" data-srcset="<?= get_subfield('img')['sizes']['1536x1536']; ?>">
-                                <source class="lazyset bg-cover" media="(min-width: 480px)" data-srcset="<?= get_subfield('img')['sizes']['large']; ?>">
-                                <source class="lazyset bg-cover" media="(min-width: 1px)" data-srcset="<?= get_subfield('img')['sizes']['medium_large']; ?>">
-                                <img class="lazy bg-cover" data-src="<?= get_subfield('img')['url']; ?>" alt="">
+                                <source class="lazyset bg-cover" media="(min-width: 1024px)" data-srcset="<?= get_sub_field('img')['sizes']['1536x1536']; ?>">
+                                <source class="lazyset bg-cover" media="(min-width: 480px)" data-srcset="<?= get_sub_field('img')['sizes']['large']; ?>">
+                                <source class="lazyset bg-cover" media="(min-width: 1px)" data-srcset="<?= get_sub_field('img')['sizes']['medium_large']; ?>">
+                                <img class="lazy bg-cover" data-src="<?= get_sub_field('img')['url']; ?>" alt="">
                             </picture>
                         </div>
                     </div>
                     <div class="col-lg-6 about__section-text">
-                        <?= get_subfield('text'); ?>
+                        <?= get_sub_field('text'); ?>
                     </div>
                 </div>
             <?php endwhile; ?>
