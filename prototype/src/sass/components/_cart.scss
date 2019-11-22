@@ -132,13 +132,19 @@ form.checkout.woocommerce-checkout {
     margin: 0 -15px;
 
     .form-row {
-        flex-basis: 50%;
+        flex-basis: 50%!important;
+        width: auto!important;
+        max-width: 50%!important;
         padding: 15px;
 
         label,
         .woocommerce-input-wrapper {
             width: 100%;
             display: block;
+        }
+
+        label {
+            margin-bottom: 0;
         }
 
     }
