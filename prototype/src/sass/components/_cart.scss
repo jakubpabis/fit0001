@@ -124,11 +124,13 @@ form.checkout.woocommerce-checkout {
 
 }
 
-.woocommerce-billing-fields__field-wrapper {
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-additional-fields {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    width: calc(100% + 30px);
     margin: 0 -15px;
 
     .form-row {
