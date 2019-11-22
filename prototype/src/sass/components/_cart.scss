@@ -153,5 +153,23 @@ form.checkout.woocommerce-checkout {
 }
 
 .woocommerce-additional-fields {
-    
+    width: calc(100% + 60px);
+    margin: 0 -30px;
+
+    .form-row {
+        width: 100%!important;
+        padding: 15px!important;
+
+        label,
+        .woocommerce-input-wrapper {
+            width: 100%;
+            display: block;
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+
+    }
+
 }
