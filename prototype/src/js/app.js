@@ -58,7 +58,8 @@ if(typeof($variationsArr) != "undefined" && $variationsArr !== null) {
     $orderDO = {
 		variations: $variationsArr,
 		mealsNo: 0,
-		mealsPerc: 0
+		mealsPerc: 0,
+		meals: []
 	}
 }
 
