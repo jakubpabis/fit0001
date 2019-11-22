@@ -31,14 +31,12 @@ get_header();
             <?php while ( have_rows('about_sections') ) : the_row(); ?>
                 <div class="row justify-content-center about__section-item">
                     <div class="col-lg-6 about__section-img">
-                        <div class="img">
-                            <picture class="bg-cover-abs">
-                                <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_sub_field('img')['sizes']['1536x1536']; ?>">
-                                <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_sub_field('img')['sizes']['large']; ?>">
-                                <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_sub_field('img')['sizes']['medium_large']; ?>">
-                                <img class="lazy bg-cover-abs" data-src="<?= get_sub_field('img')['url']; ?>" alt="">
-                            </picture>
-                        </div>
+                        <picture class="bg-cover-abs">
+                            <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_sub_field('img')['sizes']['1536x1536']; ?>">
+                            <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_sub_field('img')['sizes']['large']; ?>">
+                            <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_sub_field('img')['sizes']['medium_large']; ?>">
+                            <img class="lazy bg-cover-abs" data-src="<?= get_sub_field('img')['url']; ?>" alt="">
+                        </picture>
                     </div>
                     <div class="col-lg-6 about__section-text">
                         <div class="content">
