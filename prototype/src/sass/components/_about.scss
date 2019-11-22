@@ -2,6 +2,7 @@
 
     &__section {
         padding: 100px 0 200px;
+        background-color: #F5F5F5;
 
         &-item {
             margin-bottom: 100px;
@@ -10,15 +11,14 @@
             border-radius: 30px;
             box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: .15);
     
-    
             &:nth-child(2n) {
     
                 .about__section-text {
-                    order: 100;
+                    order: 1;
                 }
     
                 .about__section-img {
-                    order: 1;
+                    order: 100;
                 }
     
             }
