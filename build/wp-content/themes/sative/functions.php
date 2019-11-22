@@ -347,8 +347,8 @@ function get_custom_product_note( $cart_item_data, $product_id ){
     if ( isset($_GET['dates']) && ! empty($_GET['dates']) ) {
         $cart_item_data['custom_dates'] = sanitize_text_field( $_GET['dates'] );
     }
-    if ( isset($_GET['hour']) && ! empty($_GET['hour']) ) {
-        $cart_item_data['custom_hour'] = sanitize_text_field( $_GET['hour'] );
+    if ( isset($_GET['dateshour']) && ! empty($_GET['dateshour']) ) {
+        $cart_item_data['custom_hour'] = sanitize_text_field( $_GET['dateshour'] );
     }
     if ( isset($_GET['meals']) && ! empty($_GET['meals']) ) {
         $cart_item_data['custom_meals'] = sanitize_text_field( $_GET['meals'] );
