@@ -66,6 +66,12 @@ if(typeof($variationsArrAll) != "undefined" && $variationsArrAll !== null) {
     $orderDO['all'] = $variationsArrAll;
 }
 
+function arrayRemove(arr, value) 
+{
+	return arr.filter(function(ele){
+		return ele != value;
+	});
+}
 
 
 function slideTo($el)
@@ -204,9 +210,11 @@ $(document).ready(function() {
 			if($(this).is(':checked')) {
 				$orderDO['mealsNo']++;
 				$orderDO['mealsPerc'] = $orderDO['mealsPerc'] + $(this).data('perc');
+				$orderDO['meals'].push($(this).val());
 			} else {
 				$orderDO['mealsNo']--;
 				$orderDO['mealsPerc'] = $orderDO['mealsPerc'] - $(this).data('perc');
+				$orderDO['meals'] = arrayRemove($orderDO['meals'], $(this).val());
 			}
 			if($orderDO['mealsNo'] >= 3) {
 				var $arr = $orderDO['variations'][$orderDO['caloriesSet']];
@@ -284,6 +292,7 @@ $(document).ready(function() {
 					delete $orderDO['firstDelivery'];
 					delete $orderDO['dates'];
 				}
+				$orderDO['hour'] = $('input[name="hours"]').val();
 				orderNotice();
 			}
 		});
@@ -406,7 +415,8 @@ $(document).ready(function() {
 			}
 		}
 		var $dates = $orderDO['dates'].join(';');
-		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates;
+		var $meals = $orderDO['meals'].join(';');
+		var $finalURL = $base+$productID+'&quantity='+$quantity+'&variation_id='+$orderDO['variationID']+$variationsString+'&dates='+$dates+'&hour='+$orderDO['hour']+'&meals='+$meals;
 
 		console.log($orderDO);
 
