@@ -15,8 +15,14 @@ get_header();
         <div class="row justify-content-center contact__section-text">
             <div class="col-lg-6">
                 <?= get_field('text'); ?>
+                <h4>Social Media</h4>
+                <div class="socials">
+                    <a href="https://www.instagram.com/fitufitu_catering/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/Fitu-Fitu-Catering-Dietetyczny-119292586147630/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </div>
             </div>
             <div class="col-lg-6 contact__section-form">
+                <h4>Masz pytania? Wyślij nam wiadomość!</h4>
                 <?= do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
             </div>
         </div>

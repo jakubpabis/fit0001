@@ -22,9 +22,30 @@
 
         }
 
+        .socials {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
     }
 
     &-form {
+
+        input {
+            border: 3px solid #b5b5b5;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 10px;
+            appearance: none;
+            padding: 8px 20px;
+            margin-bottom: 30px;
+            outline: 0!important;
+        }
+
+        ::placeholder {
+            opacity: 1!important;
+            color: #b5b5b5!important;
+        }
 
     }
 
