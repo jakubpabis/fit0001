@@ -1,7 +1,7 @@
 .about {
 
     &__section {
-        padding: 300px 0 100px;
+        padding: 300px 0 50px;
         margin-top: -200px;
         background-color: #F5F5F5;
 
@@ -67,7 +67,7 @@
     }
 
     &__table {
-        padding: 0 0 150px;
+        padding: 0 0 200px;
         background-color: #F5F5F5;
 
         &-item {
@@ -89,7 +89,7 @@
 
                 .line {
                     width: 100%;
-                    padding: 12px 25px;
+                    padding: 12px 15px;
                     display: flex;
                     flex-wrap: nowrap;
                     align-items: center;
@@ -108,7 +108,7 @@
                 }
 
                 .text {
-                    padding: 25px 25px;
+                    padding: 15px;
                     background-color: white;
                     display: block;
 

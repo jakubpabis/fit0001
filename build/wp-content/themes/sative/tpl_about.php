@@ -57,9 +57,9 @@ get_header();
                     <div class="col-lg-3 about__table-item">
                         <div class="content">
                             <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
-                                <h4>
+                                <h5>
                                     <?= get_sub_field('title'); ?>
-                                </h4>
+                                </h5>
                                 <?= get_sub_field('icon_code'); ?>
                             </div>
                             <div class="text">
