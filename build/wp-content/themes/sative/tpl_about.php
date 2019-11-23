@@ -47,7 +47,7 @@ get_header();
 <section class="about__table">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-12 text-center">
+            <div class="col-lg-10 col-12 text-center">
                 <h2>
                     <?= get_field('table_title'); ?>
                 </h2>
