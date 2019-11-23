@@ -445,7 +445,7 @@ $(document).ready(function() {
 	$(document).on('click', '.woocommerce-notices-wrapper', function(e) {
 		var $el = e.target;
 		console.log($el);
-		if($el.attr('class') == 'woocommerce-notices-wrapper'){
+		if($($el).hasClass('woocommerce-notices-wrapper')){
 			$(this).removeClass('vis');
 		}
 	});
