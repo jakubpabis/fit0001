@@ -10,6 +10,10 @@
             line-height: 1;
         }
 
+        h4 {
+            margin-bottom: 10px;
+        }
+
         a {
             
             &:hover {
@@ -17,7 +21,7 @@
             }
 
             i {
-                font-size: 32px;
+                font-size: 36px;
             }
 
         }
@@ -25,6 +29,11 @@
         .socials {
             display: flex;
             flex-wrap: nowrap;
+
+            a {
+                margin-right: 15px;
+            }
+            
         }
 
     }
