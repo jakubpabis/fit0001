@@ -31,6 +31,15 @@
 
     &-form {
 
+        h4,
+        h5 {
+            margin-top: 0;
+        }
+
+        h5 {
+            margin-bottom: 0;
+        }
+
         input,
         textarea {
             border: 3px solid #b5b5b5;
