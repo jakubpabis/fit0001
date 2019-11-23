@@ -2,4 +2,30 @@
     padding: 300px 0 200px;
     margin-top: -200px;
     background-color: #F5F5F5;
+
+    &-text {
+
+        h1 {
+            margin-top: 0;
+            line-height: 1;
+        }
+
+        a {
+            
+            &:hover {
+                color: $color-primary;
+            }
+
+            i {
+                font-size: 32px;
+            }
+
+        }
+
+    }
+
+    &-form {
+
+    }
+
 }

@@ -12,11 +12,11 @@ get_header();
 
 <section class="contact__section">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center contact__section-text">
             <div class="col-lg-6">
                 <?= get_field('text'); ?>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 contact__section-form">
                 <?= do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
             </div>
         </div>
