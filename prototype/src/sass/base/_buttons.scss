@@ -94,7 +94,8 @@
 
 	}
 
-	&__full {
+	&__full,
+	&__primary {
 		background-color: $color-tertiary;
 		color: white!important;
 		font-size: 21px;
@@ -163,6 +164,16 @@
 	
 		}
 
+	}
+
+	&__primary {
+		color: white!important;
+		background-color: $color-purple!important;
+
+		&:hover {
+			color: white!important;
+		}
+		
 	}
 
 	&:hover,
