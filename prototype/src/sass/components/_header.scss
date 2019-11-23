@@ -187,4 +187,42 @@
 
     }
 
+    &__contact {
+        max-height: 64vh;
+        margin: -8px -8px 0 -8px;
+        min-height: 500px;
+        color: white!important;
+        border-radius: 0 0 200px 0;
+        border: 8px solid white;
+        box-shadow: 0 3px 15px 0 rgba($color: #000000, $alpha: .25);
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        
+        iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgb(0,0,0);
+            background: -moz-linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.75) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.75) 100%);
+            background: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.75) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+            z-index: 1;
+        }
+
+    }
+
 }
