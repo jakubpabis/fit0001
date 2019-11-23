@@ -65,6 +65,7 @@ get_header();
                             <div class="text">
                                 <?= get_sub_field('text'); ?>
                             </div>
+                            <a class="btn btn__full slim nocolor" style="background-color: <?= get_sub_field('color'); ?>" href="<?= get_sub_field('link')['url']; ?>">Zamów teraz</a>
                         </div>
                     </div>
                 <?php endwhile; ?>
