@@ -44,5 +44,34 @@ get_header();
     </div>
 </section>
 
+<section class="about__table">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2>
+                    <?= get_field('table_title'); ?>
+                </h2>
+            </div>
+            <?php if( have_rows('table') ): ?>
+                <?php while ( have_rows('table') ) : the_row(); ?>
+                    <div class="col-lg-3 about__table-item">
+                        <div class="content">
+                            <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
+                                <h4>
+                                    <?= get_sub_field('title'); ?>
+                                </h4>
+                                <?= get_sub_field('icon_code'); ?>
+                            </div>
+                            <div class="text">
+                                <?= get_sub_field('text'); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
 <?php
 get_footer();
