@@ -22,7 +22,8 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-6 contact__section-form">
-                <h4>Masz pytania? Wyślij nam wiadomość!</h4>
+                <h5>Masz pytania?</h5>
+                <h4>Wyślij nam wiadomość!</h4>
                 <?= do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
             </div>
         </div>
