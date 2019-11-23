@@ -13,7 +13,7 @@
             <footer class="footer">
                 <div class="footer__top">
                     <div class="container">
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center align-items-end">
                             <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
                                 <a href="/" class="logo">
                                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
@@ -22,7 +22,11 @@
                                 </a>
                             </div>
                             <div class="col-lg-4 col-md-5 col-sm-6 col-12 text-right">
-
+                                <div class="socials">
+                                    <a href="https://www.instagram.com/fitufitu_catering/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/Fitu-Fitu-Catering-Dietetyczny-119292586147630/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                </div>
+                                <a href="tel:+48576118007" class="tel"><strong>+48 576 118 007</strong></a>
                             </div>
                         </div>
                     </div>

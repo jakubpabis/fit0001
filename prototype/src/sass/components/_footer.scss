@@ -32,7 +32,31 @@
                 margin: 0 auto;
             }
 
-        }    
+        }
+        
+        .text-right {
+            margin-bottom: 10px;
+
+            a {
+                font-size: 26px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+            }
+
+            .socials {
+                margin-bottom: 5px;
+
+                a {
+                    font-size: 36px;
+                    margin-left: 12px;
+                }
+
+            }
+
+        }
 
     }
 
