@@ -26,6 +26,7 @@ var $cities = {
 		'Trzyciąż',
 		'Milonki'
 	),
+	'32-300': 'Olkusz',
 	'32-045': 'Wielmoża',
 	'32-043': 'Skała', 
 	'32-047': 'Ojców', 
