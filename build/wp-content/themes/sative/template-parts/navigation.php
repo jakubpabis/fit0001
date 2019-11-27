@@ -1,14 +1,22 @@
 <nav class="main-navigation">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-3">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-sm-3 col-auto">
                 <a href="/" class="logo">
                     <object type="image/svg+xml" data="<?= get_template_directory_uri(); ?>/assets/img/logo.svg">
                         <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
                     </object>
                 </a>
             </div>
-            <div class="col-sm-9">
+            <div class="d-sm-none d-xs-block col-auto menu-btn">
+                <button type="button" class="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="col-sm-9 col-12 main-navigation__menu-container">
+                <button type="button" class="menu-close">
+                    <i class="far fa-times-circle"></i>
+                </button>
                 <div class="row">
                     <div class="col-12">
                         <?php

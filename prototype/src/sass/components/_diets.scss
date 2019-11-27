@@ -47,6 +47,10 @@
                     justify-content: space-between;
                     align-self: flex-start;
 
+                    @media(max-width: 575px) {
+                        padding: 10px 15px;
+                    }
+
                     * {
                         margin: 0;
                         color: white;
@@ -62,6 +66,10 @@
                     padding: 25px 25px;
                     background-color: white;
                     display: block;
+
+                    @media(max-width: 575px) {
+                        padding: 15px;
+                    }
 
                     p {
                         margin: 0 0 1em 0;
@@ -85,6 +93,10 @@
                     align-items: flex-end;
                     align-self: flex-end;
                     flex-grow: 10;
+
+                    @media(max-width: 575px) {
+                        padding: 0 15px 15px 15px;
+                    }
 
                     .more {
                         font-size: 18px;

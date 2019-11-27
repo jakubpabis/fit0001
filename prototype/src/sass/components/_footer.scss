@@ -49,9 +49,18 @@
             .socials {
                 margin-bottom: 5px;
 
+                @media(max-width: 575px) {
+                    margin-top: 30px;
+                }
+
                 a {
                     font-size: 36px;
                     margin-left: 12px;
+
+                    @media(max-width: 575px) {
+                        margin: 0 6px;
+                    }
+
                 }
 
             }

@@ -128,7 +128,22 @@ function lazyImages()
 
 }
 
+function menuOpen()
+{
+	$('.menu-button').on('click', function() {
+		$('.main-navigation__menu-container').css({'display' : 'flex'}).addClass('animated fast fadeInUp');
+	});
+	$('.menu-close').on('click', function() {
+		$('.main-navigation__menu-container').addClass('fadeOutDown');
+		setTimeout(function() {
+			$('.main-navigation__menu-container').css({'display' : 'none'}).removeClass('animated fast fadeInUp fadeOutDown');
+		}, 350);
+	});
+}
+
 $(document).ready(function() {
+
+	menuOpen();
 
 	if(typeof($variationsArr) != "undefined" && $variationsArr !== null) {
 
