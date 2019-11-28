@@ -639,6 +639,10 @@
                             padding: 4px 40px;
                         }
 
+                        @media(max-width: 350px) {
+                            max-width: 172px;
+                        }
+
                     }
 
                     i {
