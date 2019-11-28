@@ -64,6 +64,11 @@
         h1 {
             color: white;
             text-shadow: 3px 3px 10px rgba($color: #000000, $alpha: 1);
+
+            @media(max-width: 575px) {
+                padding-right: 50px;
+            }
+
         }
 
     }
@@ -128,6 +133,11 @@
         h1 {
             color: white;
             text-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .75);
+
+            @media(max-width: 575px) {
+                padding-right: 50px;
+            }
+
         }
 
     }
@@ -192,6 +202,11 @@
         h1 {
             color: white;
             text-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .75);
+
+            @media(max-width: 575px) {
+                padding-right: 50px;
+            }
+
         }
 
     }
@@ -256,6 +271,11 @@
         h1 {
             color: white;
             text-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .75);
+
+            @media(max-width: 575px) {
+                padding-right: 50px;
+            }
+
         }
 
     }
