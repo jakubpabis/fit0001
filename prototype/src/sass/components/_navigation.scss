@@ -277,6 +277,12 @@
     &+article {
         padding-top: 240px;
         padding-bottom: 200px;
+
+        @media(max-width: 575px) {
+            padding-top: 140px;
+            padding-bottom: 100px;
+        }
+
     }
 
 }
