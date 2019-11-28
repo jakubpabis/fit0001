@@ -325,15 +325,19 @@
             color: $color-primary;
             border-radius: 30px;
             display: block;
+            overflow: hidden;
             opacity: 1;
             font-size: 30px;
+            background-color: white;
 
             i {
                 font-size: 28px;
+                overflow: hidden;
                 height: 30px;
                 width: 30px;
                 color: $color-primary;
                 border-radius: 30px;
+                background-color: white;
             }
 
         }
