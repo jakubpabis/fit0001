@@ -84,6 +84,24 @@
 
     }
 
+    .menu-close {
+        display: none;
+
+        @media(max-width: 575px) {
+            display: flex;
+        }
+
+    }
+
+    .menu-btn {
+        display: none;
+
+        @media(max-width: 575px) {
+            display: block;
+        }
+
+    }
+
     .upper-menu {
         padding: 0;
         margin: 0 -15px 0 0;

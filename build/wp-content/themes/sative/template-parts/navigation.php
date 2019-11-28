@@ -8,7 +8,7 @@
                     </object>
                 </a>
             </div>
-            <div class="d-sm-none d-xs-block col-auto menu-btn">
+            <div class="col-auto menu-btn">
                 <button type="button" class="menu-button">
                     <i class="fas fa-bars"></i>
                 </button>
