@@ -24,7 +24,7 @@
     
             }
     
-            @media(max-width: 991px) {
+            @media(max-width: 767px) {
     
                 .about__section-text {
                     order: 100!important;
@@ -76,6 +76,8 @@
             display: flex;
 
             .content {
+                width: 100%;
+                height: 100%;
                 background-color: white;
                 display: flex;
                 flex-wrap: wrap;
