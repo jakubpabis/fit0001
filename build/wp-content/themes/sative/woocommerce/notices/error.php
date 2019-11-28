@@ -27,7 +27,6 @@ if ( ! $messages ) {
 <ul class="woocommerce-error" role="alert">
 	<?php foreach ( $messages as $message ) : ?>
 		<li>
-			<span class="close"><i class="fas fa-times-circle"></i></span>
 			<?php
 				echo wc_kses_notice( $message );
 			?>
