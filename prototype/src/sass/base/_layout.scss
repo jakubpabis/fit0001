@@ -203,3 +203,7 @@ td.product-name {
 .woocommerce-page table.cart td.actions {
 	padding: 12px 15px;
 }
+
+.woocommerce form .form-row label[for="billing_address_2"] {
+	display: none!important;
+}
