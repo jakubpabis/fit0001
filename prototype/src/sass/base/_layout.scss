@@ -207,3 +207,7 @@ td.product-name {
 .woocommerce form .form-row label[for="billing_address_2"] span {
 	display: none!important;
 }
+
+.woocommerce-checkout #payment {
+	border-radius: 20px;
+}
