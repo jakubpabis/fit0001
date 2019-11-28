@@ -125,7 +125,7 @@ if($product->is_type('variable')){
 					</span>
 				</h2>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6 col-md-10 col-12">
 				<form id="order__form" class="diets__order-form" action="<?php echo admin_url('admin-post.php'); ?>" method="post">
 					<input type="hidden" name="productID" value="<?= $product->get_ID(); ?>">
 					<div class="owl-carousel order owl-theme">
