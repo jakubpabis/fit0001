@@ -46,7 +46,6 @@
                 padding-top: 80px;
             }
 
-
             .row {
                 max-height: 80vh;
                 min-height: 640px;
@@ -78,6 +77,11 @@
         border: 8px solid white;
         box-shadow: 0 3px 15px 0 rgba($color: #000000, $alpha: .25);
 
+        @media(max-width: 575px) {
+            max-height: 100vh;
+            min-height: 300px;
+        }
+
         &:before {
             content: '';
             position: absolute;
@@ -100,10 +104,23 @@
             position: relative;
             z-index: 9;
 
+            @media(max-width: 575px) {
+                max-height: 100vh;
+                min-height: 300px;
+                padding-top: 80px;
+            }
+
             .row {
                 max-height: 64vh;
                 min-height: 550px;
                 padding: 100px 0;
+
+                @media(max-width: 575px) {
+                    max-height: 100vh;
+                    min-height: 300px;
+                    padding: 50px 0;
+                }
+
             }
 
         }
@@ -124,6 +141,11 @@
         border: 8px solid white;
         box-shadow: 0 3px 15px 0 rgba($color: #000000, $alpha: .25);
 
+        @media(max-width: 575px) {
+            max-height: 100vh;
+            min-height: 300px;
+        }
+
         &:before {
             content: '';
             position: absolute;
@@ -146,10 +168,23 @@
             position: relative;
             z-index: 9;
 
+            @media(max-width: 575px) {
+                max-height: 100vh;
+                min-height: 300px;
+                padding-top: 80px;
+            }
+
             .row {
                 max-height: 50vh;
                 min-height: 400px;
                 padding: 100px 0;
+
+                @media(max-width: 575px) {
+                    max-height: 100vh;
+                    min-height: 300px;
+                    padding: 50px 0;
+                }
+
             }
 
         }
@@ -170,6 +205,11 @@
         border: 8px solid white;
         box-shadow: 0 3px 15px 0 rgba($color: #000000, $alpha: .25);
 
+        @media(max-width: 575px) {
+            max-height: 100vh;
+            min-height: 300px;
+        }
+
         &:before {
             content: '';
             position: absolute;
@@ -192,10 +232,23 @@
             position: relative;
             z-index: 9;
 
+            @media(max-width: 575px) {
+                max-height: 100vh;
+                min-height: 300px;
+                padding-top: 80px;
+            }
+
             .row {
                 max-height: 50vh;
                 min-height: 400px;
                 padding: 100px 0;
+
+                @media(max-width: 575px) {
+                    max-height: 100vh;
+                    min-height: 300px;
+                    padding: 50px 0;
+                }
+
             }
 
         }
