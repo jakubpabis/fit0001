@@ -298,7 +298,7 @@
     }
 
     > div {
-        overflow: auto;
+        overflow: visible;
         border-radius: 10px;
         padding: 2em;
         display: flex;
@@ -325,6 +325,8 @@
             color: $color-primary;
             border-radius: 30px;
             display: block;
+            opacity: 1;
+            font-size: 30px;
 
             i {
                 font-size: 28px;
