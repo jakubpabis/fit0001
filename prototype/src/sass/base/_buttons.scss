@@ -95,7 +95,8 @@
 	}
 
 	&__full,
-	&-primary {
+	&-primary,
+	.button.wc-forward {
 		background-color: $color-tertiary;
 		color: white!important;
 		font-size: 21px;

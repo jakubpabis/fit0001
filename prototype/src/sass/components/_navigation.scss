@@ -314,6 +314,19 @@
             margin-left: 30px;
         }
 
+        span.close {
+            position: absolute;
+            margin: 0;
+            top: -5px;
+            right: -5px;
+
+            i {
+                font-size: 21px;
+                color: $color-primary;
+            }
+
+        }
+
     }
 
 }
