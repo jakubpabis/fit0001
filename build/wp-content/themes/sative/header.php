@@ -37,7 +37,7 @@
     </noscript>-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/main.min.css">
-    <script src="https://kit.fontawesome.com/7acc43e0e6.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/7acc43e0e6.js" crossorigin="anonymous"></script>-->
 </head>
 
 <body <?php body_class(); ?>>
