@@ -24,6 +24,11 @@ form.checkout.woocommerce-checkout {
         max-width: 50%!important;
         padding: 15px!important;
 
+        @media(max-width: 575px) {
+            flex-basis: 100%!important;
+            max-width: 100%!important;
+        }
+
         label,
         .woocommerce-input-wrapper {
             width: 100%;
