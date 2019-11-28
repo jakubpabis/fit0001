@@ -8,11 +8,11 @@ get_header();
 
 <header class="header header__about">
     <picture class="bg-cover-abs">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1600px)" data-srcset="<?= get_the_post_thumbnail_url(); ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_the_post_thumbnail_url('', '1536x1536'); ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_the_post_thumbnail_url('', 'large'); ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_the_post_thumbnail_url('', 'medium_large'); ?>">
-        <img class="lazy bg-cover-abs" data-src="<?= get_the_post_thumbnail_url(); ?>" alt="">
+        <source class=" bg-cover-abs" media="(min-width: 1600px)" srcset="<?= get_the_post_thumbnail_url(); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1024px)" srcset="<?= get_the_post_thumbnail_url('', '1536x1536'); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 480px)" srcset="<?= get_the_post_thumbnail_url('', 'large'); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_the_post_thumbnail_url('', 'medium_large'); ?>">
+        <img class=" bg-cover-abs" src="<?= get_the_post_thumbnail_url(); ?>" alt="">
     </picture>
     <div class="container">
         <div class="row align-items-center">
@@ -31,7 +31,7 @@ get_header();
             <?php while ( have_rows('about_sections') ) : the_row(); ?>
                 <div class="row justify-content-center about__section-item">
                     <div class="col-lg-6 about__section-img">
-                        <img data-src="<?= get_sub_field('img')['sizes']['large']; ?>" alt="" class="lazy bg-cover">
+                        <img src="<?= get_sub_field('img')['sizes']['large']; ?>" alt="" class=" bg-cover">
                     </div>
                     <div class="col-lg-6 about__section-text">
                         <div class="content">

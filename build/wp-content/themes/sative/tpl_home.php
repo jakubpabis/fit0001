@@ -8,11 +8,11 @@ get_header();
 
 <header class="header header__home">
     <picture class="bg-cover-abs">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1600px)" data-srcset="<?= get_field('header_image')['url']; ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_field('header_image')['sizes']['1536x1536']; ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_field('header_image')['sizes']['large']; ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_field('header_image')['sizes']['medium_large']; ?>">
-        <img class="lazy bg-cover-abs" data-src="<?= get_field('header_image')['url']; ?>" alt="">
+        <source class=" bg-cover-abs" media="(min-width: 1600px)" srcset="<?= get_field('header_image')['url']; ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1024px)" srcset="<?= get_field('header_image')['sizes']['1536x1536']; ?>">
+        <source class=" bg-cover-abs" media="(min-width: 480px)" srcset="<?= get_field('header_image')['sizes']['large']; ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_field('header_image')['sizes']['medium_large']; ?>">
+        <img class=" bg-cover-abs" src="<?= get_field('header_image')['url']; ?>" alt="">
     </picture>
     <div class="container">
         <div class="row align-items-center">
@@ -55,7 +55,7 @@ get_header();
                     <div class="col-lg-5 col-md-6 col-sm-10 col-12 diets__home-card">
                         <div class="content">
                             <div class="img">
-                                <img src="<?= get_sub_field('image')['sizes']['woocommerce_single']; ?>" alt="" class="lazy bg-cover">
+                                <img src="<?= get_sub_field('image')['sizes']['woocommerce_single']; ?>" alt="" class=" bg-cover">
                             </div>
                             <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
                                 <h4>

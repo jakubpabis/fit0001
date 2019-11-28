@@ -81,11 +81,11 @@ if($product->is_type('variable')){
 
 <header class="header header__diet" style="border-color: <?= get_field('color', $product->get_ID()); ?>">
 	<picture class="bg-cover-abs">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1600px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID()); ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1024px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID(), '1536x1536'); ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 480px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID(), 'large'); ?>">
-        <source class="lazyset bg-cover-abs" media="(min-width: 1px)" data-srcset="<?= get_the_post_thumbnail_url($product->get_ID(), 'medium_large'); ?>">
-        <img class="lazy bg-cover-abs" data-src="<?= get_the_post_thumbnail_url($product->get_ID()); ?>" alt="">
+        <source class=" bg-cover-abs" media="(min-width: 1600px)" srcset="<?= get_the_post_thumbnail_url($product->get_ID()); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1024px)" srcset="<?= get_the_post_thumbnail_url($product->get_ID(), '1536x1536'); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 480px)" srcset="<?= get_the_post_thumbnail_url($product->get_ID(), 'large'); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_the_post_thumbnail_url($product->get_ID(), 'medium_large'); ?>">
+        <img class=" bg-cover-abs" src="<?= get_the_post_thumbnail_url($product->get_ID()); ?>" alt="">
     </picture>
     <div class="container">
         <div class="row align-items-center">
