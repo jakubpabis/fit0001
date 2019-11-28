@@ -54,7 +54,7 @@ get_header();
             </div>
             <?php if( have_rows('table') ): ?>
                 <?php while ( have_rows('table') ) : the_row(); ?>
-                    <div class="col-lg-3 col-md-6 about__table-item">
+                    <div class="col-lg-3 col-sm-6 col-xs-8 col-12 about__table-item">
                         <div class="content">
                             <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
                                 <h5>
