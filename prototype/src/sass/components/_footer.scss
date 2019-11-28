@@ -20,6 +20,10 @@
         margin-top: 50px;
         color: $color-secondary;
 
+        @media(max-width: 991px) {
+            margin-top: 25px;
+        }
+
         * {
             color: $color-secondary;
         }
