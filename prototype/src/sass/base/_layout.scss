@@ -211,3 +211,12 @@ td.product-name {
 .woocommerce-checkout #payment {
 	border-radius: 20px;
 }
+
+.woocommerce ul.order_details {
+	padding: 0;
+
+	li {
+		margin-bottom: 20px;
+	}
+
+}
