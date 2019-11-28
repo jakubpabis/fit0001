@@ -355,6 +355,10 @@
             .btn {
                 margin-top: 40px;
 
+                @media(max-width: 575px) {
+                    margin-top: 25px;
+                }
+
                 i {
                     margin-left: 12px;
                     margin-right: -6px;
@@ -365,6 +369,10 @@
                     opacity: 0.6;
                     margin-top: 30px;
                     transform-origin: center center!important;
+
+                    @media(max-width: 575px) {
+                        margin-top: 20px;
+                    }
 
                     i {
                         margin-left: -4px;
@@ -379,6 +387,11 @@
 
         .owl-item {
             padding: 0 20px;
+
+            @media(max-width: 575px) {
+                padding: 0 10px;
+            }
+
         }
 
         &-card {
@@ -394,6 +407,10 @@
             .card-header {
                 padding: 5px 30px;
                 color: white;
+
+                @media(max-width: 575px) {
+                    padding: 5px 15px;   
+                }
 
                 .finalpay {
                     margin: 0.3em 0;
@@ -422,13 +439,26 @@
             .card-body {
                 padding: 45px 30px;
 
+                @media(max-width: 575px) {
+                    padding: 30px 15px;
+                }
+
                 .inputs {
                     font-size: 28px;
                     display: inline-block;
                     text-align: left;
 
+                    @media(max-width: 575px) {
+                        font-size: 24px;
+                    }
+
                     small {
                         font-size: 16px;
+
+                        @media(max-width: 575px) {
+                            font-size: 15px;
+                        }
+
                     }
                     
                     .pretty {
@@ -458,6 +488,10 @@
                             font-size: 19px;
                             margin: 0 0 5px 0;
 
+                            @media(max-width: 575px) {
+                                font-size: 16px;
+                            }
+
                             small {
                                 opacity: 0.8;
                                 font-weight: 500;
@@ -480,6 +514,12 @@
                             padding: 8px 20px;
                             margin-bottom: 30px;
                             outline: 0!important;
+
+                            @media(max-width: 575px) {
+                                font-size: 16px;
+                                padding: 6px 15px;
+                            }
+
                         }
 
                         ::placeholder {
@@ -503,6 +543,11 @@
 
                     .datepicker-inline {
                         padding: 30px;
+
+                        @media(max-width: 575px) {
+                            padding: 15px;
+                        }
+
                     }
 
                     .datepicker {
@@ -531,6 +576,11 @@
                     .datepicker--nav-title {
                         font-weight: 700;
                         font-size: 20px;
+
+                        @media(max-width: 575px) {
+                            font-size: 18px;
+                        }
+
                     }
 
                     .datepicker--days-names {
@@ -542,6 +592,11 @@
                         font-weight: 500;
                         height: 44px;
                         font-size: 18px;
+
+                        @media(max-width: 575px) {
+                            font-size: 16px;
+                        }
+
                     }
 
                 }
@@ -563,6 +618,11 @@
                         border: 3px solid transparent;
                         outline: 0!important;
                         border-radius: 60px;
+
+                        @media(max-width: 575px) {
+                            max-width: 180px;
+                        }
+
                     }
 
                     i {
