@@ -30,10 +30,10 @@ get_header();
         <?php if( have_rows('about_sections') ): ?>
             <?php while ( have_rows('about_sections') ) : the_row(); ?>
                 <div class="row justify-content-center about__section-item">
-                    <div class="col-lg-6 about__section-img">
+                    <div class="col-md-6 about__section-img">
                         <img src="<?= get_sub_field('img')['sizes']['large']; ?>" alt="" class=" bg-cover">
                     </div>
-                    <div class="col-lg-6 about__section-text">
+                    <div class="col-md-6 about__section-text">
                         <div class="content">
                             <?= get_sub_field('text'); ?>
                         </div>
@@ -46,7 +46,7 @@ get_header();
 
 <section class="about__table">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center align-items-stretch">
             <div class="col-lg-10 col-12 text-center">
                 <h2>
                     <?= get_field('table_title'); ?>
@@ -54,7 +54,7 @@ get_header();
             </div>
             <?php if( have_rows('table') ): ?>
                 <?php while ( have_rows('table') ) : the_row(); ?>
-                    <div class="col-lg-3 about__table-item">
+                    <div class="col-lg-3 col-md-6 about__table-item">
                         <div class="content">
                             <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
                                 <h5>
