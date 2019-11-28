@@ -13,7 +13,7 @@ get_header();
 <section class="contact__section">
     <div class="container">
         <div class="row justify-content-center contact__section-text">
-            <div class="col-lg-6">
+            <div class="col-md-6 col-12">
                 <?= get_field('text'); ?>
                 <h4>Social Media</h4>
                 <div class="socials">
@@ -21,7 +21,7 @@ get_header();
                     <a href="https://www.facebook.com/Fitu-Fitu-Catering-Dietetyczny-119292586147630/" target="_blank"><i class="fab fa-facebook-square"></i></a>
                 </div>
             </div>
-            <div class="col-lg-6 contact__section-form">
+            <div class="col-md-6 col-12 contact__section-form">
                 <h5>Masz pytania?</h5>
                 <h4>Wyślij nam wiadomość!</h4>
                 <?= do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>

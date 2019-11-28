@@ -40,6 +40,10 @@
 
     &-form {
 
+        @media(max-width: 767px) {
+            margin-top: 70px;
+        }
+
         h4,
         h5 {
             margin-top: 0;
