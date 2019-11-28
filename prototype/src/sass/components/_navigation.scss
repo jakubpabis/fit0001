@@ -298,7 +298,7 @@
     }
 
     > div {
-        overflow: hidden;
+        overflow: auto;
         border-radius: 10px;
         padding: 2em;
         display: flex;
@@ -312,16 +312,17 @@
 
         .button {
             margin-left: 30px;
+            order: 100;
         }
 
         span.close {
             position: absolute;
             margin: 0;
-            top: -5px;
-            right: -5px;
+            top: -10px;
+            right: -10px;
 
             i {
-                font-size: 21px;
+                font-size: 28px;
                 color: $color-primary;
             }
 
