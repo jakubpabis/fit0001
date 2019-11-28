@@ -466,6 +466,10 @@ $(document).ready(function() {
 		}
 	});
 
+	$(document).on('click', '.woocommerce-notices-wrapper .close', function(e) {
+		$(document).find('.woocommerce-notices-wrapper').removeClass('vis');
+	});
+
 	//slideNext();
 
 	// var options = {
