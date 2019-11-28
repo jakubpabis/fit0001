@@ -397,7 +397,7 @@
             padding: 0 20px;
 
             @media(max-width: 575px) {
-                padding: 0 10px;
+                padding: 0 15px;
             }
 
         }
@@ -634,7 +634,9 @@
                         border-radius: 60px;
 
                         @media(max-width: 575px) {
+                            font-size: 18px;
                             max-width: 200px;
+                            padding: 4px 40px;
                         }
 
                     }
@@ -645,6 +647,10 @@
                         line-height: 1;
                         vertical-align: -10px;
                         z-index: 9999;
+
+                        @media(max-width: 575px) {
+                            font-size: 40px;
+                        }
 
                         &.fa-minus-circle {
                             transform: translateX(50px);
