@@ -15,6 +15,7 @@
         @media(max-width: 575px) {
             max-height: 100vh;
             min-height: 300px;
+            border-radius: 0 0 100px 0;
         }
 
 
@@ -85,6 +86,7 @@
         @media(max-width: 575px) {
             max-height: 100vh;
             min-height: 200px;
+            border-radius: 0 0 100px 0;
         }
 
         &:before {
@@ -154,6 +156,7 @@
         @media(max-width: 575px) {
             max-height: 100vh;
             min-height: 200px;
+            border-radius: 0 0 100px 0;
         }
 
         &:before {
@@ -223,6 +226,7 @@
         @media(max-width: 575px) {
             max-height: 100vh;
             min-height: 200px;
+            border-radius: 0 0 100px 0;
         }
 
         &:before {
@@ -292,6 +296,10 @@
         padding-bottom: 40%;
         position: relative;
         height: 0;
+
+        @media(max-width: 575px) {
+            border-radius: 0 0 100px 0;
+        }
         
         iframe{
             left: 0;
