@@ -3,6 +3,10 @@
     background-color: #F5F5F5;
     margin-top: -200px;
 
+    @media(max-width: 991px) {
+        padding: 250px 0 50px;
+    }
+
     &__home {
         padding: 50px 0 170px;
         background-color: #F5F5F5;
