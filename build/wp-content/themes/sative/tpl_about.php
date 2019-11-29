@@ -14,15 +14,17 @@ get_header();
         <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_field('header_image')['sizes']['medium_large']; ?>">
         <img class=" bg-cover-abs" src="<?= get_field('header_image')['url']; ?>" alt="">
     </picture>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 col-12">
-                <h1>
-                    <?= get_field('header_title'); ?>
-                </h1>
+    <?php if(get_field('header_title')) : ?>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-12">
+                    <h1>
+                        <?= get_field('header_title'); ?>
+                    </h1>
+                </div>
             </div>
         </div>
-    </div>
+    <?php endif; ?>
 </header>
 
 <section class="about__section">
