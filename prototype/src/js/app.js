@@ -78,7 +78,9 @@ function arrayRemove(arr, value)
 
 function slideTo($el)
 {
-
+	$('html, body').animate({
+		scrollTop: $($el).offset().top
+	}, 400);
 }
 
 // function slideNext() 
@@ -141,6 +143,8 @@ function menuOpen()
 	});
 }
 
+
+
 $(document).ready(function() {
 
 	menuOpen();
@@ -165,11 +169,18 @@ $(document).ready(function() {
 		$(document).find('.btn.next').click(function() {
 			if(!$(this).hasClass('disabled')) {
 				$order.trigger('next.owl.carousel');
+				if($('html, body').scrollTop() > $('#order__form').offset().top) {
+					slideTo('#order__form');
+				}
+				
 			}
 		});
 
 		$(document).find('.btn.back').click(function() {
 			$order.trigger('prev.owl.carousel');
+			if($('html, body').scrollTop() > $('#order__form').offset().top) {
+				slideTo('#order__form');
+			}
 		});
 
 		var $pos = 0;
@@ -290,7 +301,8 @@ $(document).ready(function() {
 				$('input[name="orderDatesHelper"]').val(date);
 				$orderDates = $('input[name="orderDates"]').val().split(',');
 				$orderDatesHelper = $('input[name="orderDatesHelper"]').val().split(',');
-				$orderDates.sort();
+				$orderDates.sort(); // do poprawy, źle sortuje
+				console.log($orderDates);
 				//
 				$orderDO['dates'] = $orderDates.sort();
 				if($orderDO['dates'] && $orderDO['pricePerDay']) {
@@ -298,7 +310,7 @@ $(document).ready(function() {
 				}
 				//
 				if($orderDates.length > 0 && $orderDatesHelper[0] != "") {
-					//console.log($orderDates);
+					console.log($orderDates);
 					for(var i=0; i<$orderDatesHelper.length; i++) {
 						var $d = new Date($orderDatesHelper[i]);
 						$d.setDate($d.getDate() - 1);
