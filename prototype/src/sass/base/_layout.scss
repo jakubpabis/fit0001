@@ -221,17 +221,22 @@ td.product-name {
 
 }
 
-dd {
+// dd {
 
-	&.variation-Dnidostawy {
-		white-space: pre-line;
-		word-break: break-word;
+// 	&.variation-Dnidostawy {
+// 		white-space: pre-line;
+// 		word-break: break-word;
 		
-		* {
-			white-space: pre-line;
-			word-break: break-word;
-		}
+// 		* {
+// 			white-space: pre-line;
+// 			word-break: break-word;
+// 		}
 
-	}
+// 	}
 
+// }
+
+.woocommerce td.product-name dl.variation p {
+	white-space: pre-line;
+	word-break: break-word;
 }
