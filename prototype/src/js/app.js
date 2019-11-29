@@ -419,9 +419,9 @@ $(document).ready(function() {
 	$('#justAddToCartButton, #buyNowButton').on('click', function(e) {
 		e.preventDefault();
 		if($(this).attr('id') == 'buyNowButton') {
-			var $base = 'zamowienie/?add-to-cart=';
+			var $base = 'http://'+window.location.hostname+'/zamowienie/?add-to-cart=';
 		} else {
-			var $base = '?add-to-cart=';
+			var $base = 'http://'+window.location.hostname+'/?add-to-cart=';
 		}
 		var $productID = $('input[name="productID"]').val();
 		var $quantity = $('input[name="quantity"]').val();
