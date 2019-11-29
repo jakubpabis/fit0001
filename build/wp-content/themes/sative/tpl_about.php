@@ -8,23 +8,21 @@ get_header();
 
 <header class="header header__about">
     <picture class="bg-cover-abs">
-        <source class=" bg-cover-abs" media="(min-width: 1600px)" srcset="<?= get_field('header_image')['url']; ?>">
-        <source class=" bg-cover-abs" media="(min-width: 1024px)" srcset="<?= get_field('header_image')['sizes']['1536x1536']; ?>">
-        <source class=" bg-cover-abs" media="(min-width: 480px)" srcset="<?= get_field('header_image')['sizes']['large']; ?>">
-        <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_field('header_image')['sizes']['medium_large']; ?>">
-        <img class=" bg-cover-abs" src="<?= get_field('header_image')['url']; ?>" alt="">
+        <source class=" bg-cover-abs" media="(min-width: 1600px)" srcset="<?= get_the_post_thumbnail_url(); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1024px)" srcset="<?= get_the_post_thumbnail_url('', '1536x1536'); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 480px)" srcset="<?= get_the_post_thumbnail_url('', 'large'); ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_the_post_thumbnail_url('', 'medium_large'); ?>">
+        <img class=" bg-cover-abs" src="<?= get_the_post_thumbnail_url(); ?>" alt="">
     </picture>
-    <?php if(get_field('header_title')) : ?>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 col-12">
-                    <h1>
-                        <?= get_field('header_title'); ?>
-                    </h1>
-                </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-12">
+                <h1>
+                    <?= get_the_title(); ?>
+                </h1>
             </div>
         </div>
-    <?php endif; ?>
+    </div>
 </header>
 
 <section class="about__section">

@@ -6,8 +6,25 @@
 get_header();
 ?>
 
-<header class="header header__contact">
-    <iframe src="<?= get_field('map') ?>" frameborder="0" style="border:0" allowfullscreen></iframe>
+<header class="header header__about">
+    <picture class="bg-cover-abs">
+        <source class=" bg-cover-abs" media="(min-width: 1600px)" srcset="<?= get_field('header_image')['url']; ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1024px)" srcset="<?= get_field('header_image')['sizes']['1536x1536']; ?>">
+        <source class=" bg-cover-abs" media="(min-width: 480px)" srcset="<?= get_field('header_image')['sizes']['large']; ?>">
+        <source class=" bg-cover-abs" media="(min-width: 1px)" srcset="<?= get_field('header_image')['sizes']['medium_large']; ?>">
+        <img class=" bg-cover-abs" src="<?= get_field('header_image')['url']; ?>" alt="">
+    </picture>
+    <?php if(get_field('header_title')) : ?>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-12">
+                    <h1>
+                        <?= get_field('header_title'); ?>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </header>
 
 <section class="contact__section">
