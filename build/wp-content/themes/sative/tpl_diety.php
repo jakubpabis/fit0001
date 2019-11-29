@@ -81,6 +81,35 @@ $products = wc_get_products( array(
 </section>
 
 
+<section class="about__table">
+    <div class="container">
+        <div class="row justify-content-center align-items-stretch">
+            <div class="col-lg-10 col-12 text-center">
+                <h2>
+                    <?= get_field('table_title'); ?>
+                </h2>
+            </div>
+            <?php if( have_rows('table') ): ?>
+                <?php while ( have_rows('table') ) : the_row(); ?>
+                    <div class="col-lg-3 col-sm-6 col-xs-8 col-12 about__table-item">
+                        <div class="content">
+                            <div class="line" style="background-color: <?= get_sub_field('color'); ?>">
+                                <h5>
+                                    <?= get_sub_field('title'); ?>
+                                </h5>
+                                <?= get_sub_field('icon_code'); ?>
+                            </div>
+                            <div class="text">
+                                <?= get_sub_field('text'); ?>
+                            </div>
+                            <a class="btn btn__full slim nocolor" style="background-color: <?= get_sub_field('color'); ?>" href="<?= get_sub_field('link'); ?>">Zamów teraz</a>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer();
