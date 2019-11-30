@@ -423,7 +423,7 @@ $(document).ready(function() {
 		if($(this).attr('id') == 'buyNowButton') {
 			var $base = window.location.protocol+'//'+window.location.hostname+'/zamowienie/?add-to-cart=';
 		} else {
-			var $base = window.location.protocol+'//'+window.location.hostname+'/?add-to-cart=';
+			var $base = '/?add-to-cart=';
 		}
 		var $productID = $('input[name="productID"]').val();
 		var $quantity = $('input[name="quantity"]').val();

@@ -239,21 +239,28 @@ td.product-name {
 // }
 
 .woocommerce td.product-name dl.variation p {
-	white-space: pre-line;
-	word-break: break-word;
+	@media(max-width: 767px) {
+		white-space: pre-line;
+		word-break: break-word;
+	}
 }
 
 dl.variation {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 10px!important;
+	
+	@media(max-width: 767px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 10px!important;
 
-	dt {
-		flex-basis: 100%;
-	}
+		dt {
+			flex-basis: 100%;
+			text-align: left;
+		}
 
-	dd {
-		margin-bottom: 10px!important;
+		dd {
+			margin-bottom: 10px!important;
+		}
+
 	}
 
 }
