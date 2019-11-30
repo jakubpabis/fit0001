@@ -34,6 +34,12 @@ switch($colorCode) {
 	case strtolower('#A8CE38'):
 		$color = 'green';
 		break;
+	case strtolower('#244d97'):
+		$color = 'hashi';
+		break;
+	case strtolower('#12a876'):
+		$color = 'wege';
+		break;
 }
 /**
  * Hook: woocommerce_before_single_product.
@@ -76,7 +82,7 @@ if($product->is_type('variable')){
 	$variationsArr = <?= json_encode($variationsArr); ?>;
 	$variationsArrAll = <?= json_encode($product->get_available_variations()); ?>;
 	//$productID = <?= json_encode($product->get_ID()); ?>;
-	console.log($variationsArrAll);
+	//console.log($variationsArrAll);
 </script>
 
 <header class="header header__diet" style="border-color: <?= get_field('color', $product->get_ID()); ?>">

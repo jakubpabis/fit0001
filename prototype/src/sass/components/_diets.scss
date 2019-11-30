@@ -198,6 +198,14 @@
                 color: $color-bluedark;
             }
 
+            .wege {
+                color: $color-wegedark;
+            }
+
+            .hashi {
+                color: $color-hashidark;
+            }
+
             ul {
                 margin: 0;
 
@@ -260,6 +268,14 @@
                 background-color: $color-bluedark;
             }
 
+            &.wege {
+                background-color: $color-wegedark;
+            }
+
+            &.hashi {
+                background-color: $color-hashidark;
+            }
+
         }
 
     }
@@ -301,6 +317,22 @@
 
             * {
                 color: $color-greendark;
+            }
+
+        }
+
+        &.wege {
+
+            * {
+                color: $color-wegedark;
+            }
+
+        }
+
+        &.hashi {
+
+            * {
+                color: $color-hashidark;
             }
 
         }
@@ -1011,6 +1043,154 @@
 
                         input {
                             border-color: $color-greendark;
+                        }
+
+                    }
+    
+                }
+
+            }
+
+            &.wege {
+
+                .card-header {
+                    background-color: $color-wegedark;
+                }
+
+                .card-body {
+
+                    * {
+                        color: $color-wegedark;
+                    }
+    
+                    .inputs {
+
+                        .pretty {
+
+                            label {
+                                color: $color-wegedark;
+                            }
+    
+                            .state label:before {
+                                border-color: $color-wegedark;
+                            }
+
+                            input:checked~.state label:after {
+                                background-color: $color-wegedark!important;
+                            }
+    
+                        }
+
+                        .field {
+    
+                            input {
+                                border-color: $color-wegedark;
+                            }
+
+                        }
+    
+                    }
+
+                    #order__calendar {
+    
+                        .-selected- {
+                            background-color: $color-wegedark;
+                            color: white;
+                        }
+
+                        .datepicker {
+                            border-color: $color-wegedark;
+                        }
+
+                        .datepicker--nav {
+                            border-bottom-color: $color-wege;
+
+                            path { 
+                                stroke: $color-wege;
+                            }
+
+                        }
+
+                    }
+
+                    .hours {
+
+                        input {
+                            border-color: $color-wegedark;
+                        }
+
+                    }
+    
+                }
+
+            }
+
+            &.hashi {
+
+                .card-header {
+                    background-color: $color-hashidark;
+                }
+
+                .card-body {
+
+                    * {
+                        color: $color-hashidark;
+                    }
+    
+                    .inputs {
+
+                        .pretty {
+
+                            label {
+                                color: $color-hashidark;
+                            }
+    
+                            .state label:before {
+                                border-color: $color-hashidark;
+                            }
+
+                            input:checked~.state label:after {
+                                background-color: $color-hashidark!important;
+                            }
+    
+                        }
+
+                        .field {
+    
+                            input {
+                                border-color: $color-hashidark;
+                            }
+
+                        }
+    
+                    }
+
+                    #order__calendar {
+    
+                        .-selected- {
+                            background-color: $color-hashidark;
+                            color: white;
+                        }
+
+                        .datepicker {
+                            border-color: $color-hashidark;
+                        }
+
+                        .datepicker--nav {
+                            border-bottom-color: $color-hashi;
+
+                            path { 
+                                stroke: $color-hashi;
+                            }
+
+                        }
+
+                    }
+
+                    .hours {
+
+                        input {
+                            border-color: $color-hashidark;
                         }
 
                     }

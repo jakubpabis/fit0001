@@ -53,6 +53,12 @@ $products = wc_get_products( array(
                 case strtolower('#A8CE38'):
                     $color = 'green';
                     break;
+                case strtolower('#244d97'):
+                    $color = 'hashi';
+                    break;
+                case strtolower('#12a876'):
+                    $color = 'wege';
+                    break;
             }
             
         ?>
