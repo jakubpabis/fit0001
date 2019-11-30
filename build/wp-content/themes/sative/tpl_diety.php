@@ -6,7 +6,8 @@
 get_header();
 
 $products = wc_get_products( array(
-    'limit' => -1
+    'limit' => -1,
+    'order' => 'ASC'
 ) );
 
 //var_dump($prod->get_variation_attributes()['pa_kalorycznosc']); ?>
