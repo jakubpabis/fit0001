@@ -274,7 +274,7 @@ $(document).ready(function() {
 		var $orderDates, $orderDatesHelper;
 		$('#order__calendar').datepicker({
 			language: 'pl',
-			dateFormat: 'd/m/yyyy',
+			dateFormat: 'dd/mm/yyyy',
 			inline: true,
 			multipleDates: true,
 			minDate: $todayDate,
@@ -301,7 +301,7 @@ $(document).ready(function() {
 				$('input[name="orderDatesHelper"]').val(date);
 				$orderDates = $('input[name="orderDates"]').val().split(',');
 				$orderDatesHelper = $('input[name="orderDatesHelper"]').val().split(',');
-				$orderDates.sort(); // do poprawy, źle sortuje
+				$orderDates.sort(); // naprawione
 				console.log($orderDates);
 				//
 				$orderDO['dates'] = $orderDates.sort();
@@ -313,9 +313,11 @@ $(document).ready(function() {
 					console.log($orderDates);
 					for(var i=0; i<$orderDatesHelper.length; i++) {
 						var $d = new Date($orderDatesHelper[i]);
+						console.log($d);
 						$d.setDate($d.getDate() - 1);
-						$orderDatesHelper[i] = parseInt($d.getDate())+'/'+parseInt($d.getMonth()+1)+'/'+$d.getFullYear();
+						$orderDatesHelper[i] = ("0" + $d.getDate()).slice(-2)+'/'+("0" + ($d.getMonth()+1)).slice(-2)+'/'+$d.getFullYear();
 					}
+					console.log($orderDatesHelper.sort());
 					$orderDO['firstDelivery'] = $orderDatesHelper.sort()[0];
 				} else {
 					delete $orderDO['firstDelivery'];
@@ -419,9 +421,9 @@ $(document).ready(function() {
 	$('#justAddToCartButton, #buyNowButton').on('click', function(e) {
 		e.preventDefault();
 		if($(this).attr('id') == 'buyNowButton') {
-			var $base = 'http://'+window.location.hostname+'/zamowienie/?add-to-cart=';
+			var $base = window.location.protocol+'//'+window.location.hostname+'/zamowienie/?add-to-cart=';
 		} else {
-			var $base = 'http://'+window.location.hostname+'/?add-to-cart=';
+			var $base = window.location.protocol+'//'+window.location.hostname+'/?add-to-cart=';
 		}
 		var $productID = $('input[name="productID"]').val();
 		var $quantity = $('input[name="quantity"]').val();
