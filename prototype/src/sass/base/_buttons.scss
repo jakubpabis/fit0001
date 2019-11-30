@@ -91,6 +91,28 @@
 	
 		}
 
+		&.wege {
+			border: 4px solid $color-wege;
+			color: $color-wege!important;
+
+			&:hover {
+				background-color: $color-wege;
+				color: white!important;
+			}
+	
+		}
+
+		&.hashi {
+			border: 4px solid $color-hashi;
+			color: $color-hashi!important;
+
+			&:hover {
+				background-color: $color-hashi;
+				color: white!important;
+			}
+	
+		}
+
 	}
 
 	&__full,
@@ -157,6 +179,26 @@
 		&.orange {
 			color: white!important;
 			background-color: $color-orange!important;
+
+			&:hover {
+				color: white!important;
+			}
+	
+		}
+
+		&.wege {
+			color: white!important;
+			background-color: $color-wege!important;
+
+			&:hover {
+				color: white!important;
+			}
+	
+		}
+
+		&.hashi {
+			color: white!important;
+			background-color: $color-hashi!important;
 
 			&:hover {
 				color: white!important;
