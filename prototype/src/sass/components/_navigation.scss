@@ -255,6 +255,17 @@
 
     &__menu-container {
 
+        > .row {
+
+            @media(max-width: 575px) {
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+                height: 100%;
+            }
+
+        }
+
         @media(max-width: 575px) {
             background-color: white;
             position: fixed;
@@ -270,6 +281,92 @@
             min-height: 100vh;
             color: $color-primary!important;
             padding: 15px;
+        }
+
+        .mobile-contact {
+            margin-top: 30px;
+            
+            a {
+                color: $color-purple;
+                font-size: 21px;
+                font-weight: 700;
+                padding: 10px;
+            }
+
+            .socials  {
+                margin: 10px auto 20px;
+                display: flex;
+                justify-content: center;
+
+                a {
+                    font-weight: 400;
+                    margin: 0 10px;
+                    width: 44px;
+                    height: 44px;
+                    text-align: center;
+                    line-height: 44px;
+                    border-radius: 44px;
+                    border: 3px solid transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.msg {
+                        background-color: white;
+                        border-color: $color-msg;
+                    }
+
+                    &.fb {
+                        background-color: $color-fb;
+                    }
+
+                    &.insta {
+                        background-color: $color-insta;
+                    }
+
+                    i {
+                        font-size: 26px;
+                        color: white;
+
+                        &.fa-facebook-messenger {
+                            color: $color-msg;
+                        }
+
+                    }
+
+                    &:hover {
+                        text-decoration: none!important;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .mobile-bottom {
+            position: absolute;
+            bottom: 15px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+
+            @media(max-width: 575px) {
+                display: flex;
+            }
+
+            a {
+                font-weight: 600;
+                font-size: 17px;
+
+                i {
+                    font-size: 24px;
+                    margin-right: 5px;
+                    vertical-align: -3px;
+                }
+
+            }
+
         }
 
     }

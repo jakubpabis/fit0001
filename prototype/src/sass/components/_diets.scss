@@ -463,12 +463,20 @@
                     @media(max-width: 575px) {
                         font-size: 24px;
                     }
+                    
+                    @media(max-width: 359px) {
+                        font-size: 21px;
+                    }
 
                     small {
                         font-size: 16px;
 
                         @media(max-width: 575px) {
                             font-size: 15px;
+                        }
+
+                        @media(max-width: 359px) {
+                            font-size: 14px;
                         }
 
                     }
@@ -519,6 +527,7 @@
 
                         input {
                             border: 3px solid transparent;
+                            max-width: 100%;
                             font-size: 18px;
                             font-weight: 600;
                             border-radius: 10px;

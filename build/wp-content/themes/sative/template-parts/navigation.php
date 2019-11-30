@@ -18,7 +18,7 @@
                     <i class="far fa-times-circle"></i>
                 </button>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="d-sm-block d-none col-12">
                         <?php
                             wp_nav_menu(array(
                                 'theme_location'    => 'upper',
@@ -48,6 +48,30 @@
                                 'walker'          => new wp_bootstrap_navwalker()
                             ));
                         ?>
+                    </div>
+                    <div class="d-sm-none d-block col-12 text-center mobile-contact">
+                        <a title="Numer telefonu" href="tel:+48576118007">+48 576 118 007</a>
+                        <div class="socials text-center">
+                            <a class="msg" href="http://m.me/119292586147630" target="_blank">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                            <a class="fb" href="https://www.facebook.com/Fitu-Fitu-Catering-Dietetyczny-119292586147630/" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="insta" href="https://www.instagram.com/fitufitu_catering/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 mobile-bottom text-center">
+                        <a href="/koszyk">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Koszyk</span>
+                        </a>
+                        <a href="/moje-konto">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Moje konto</span>
+                        </a>
                     </div>
                 </div>
             </div>

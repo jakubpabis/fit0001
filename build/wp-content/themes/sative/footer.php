@@ -25,6 +25,9 @@
                                 <div class="socials">
                                     <a href="https://www.instagram.com/fitufitu_catering/" target="_blank"><i class="fab fa-instagram"></i></a>
                                     <a href="https://www.facebook.com/Fitu-Fitu-Catering-Dietetyczny-119292586147630/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="http://m.me/119292586147630" target="_blank">
+                                        <i class="fab fa-facebook-messenger"></i>
+                                    </a>
                                 </div>
                                 <a href="tel:+48576118007" class="tel"><strong>+48 576 118 007</strong></a>
                             </div>
