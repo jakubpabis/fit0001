@@ -239,10 +239,8 @@ td.product-name {
 // }
 
 .woocommerce td.product-name dl.variation p {
-	@media(max-width: 767px) {
-		white-space: pre-line;
-		word-break: break-word;
-	}
+	white-space: pre-line;
+	word-break: break-word;
 }
 
 dl.variation {
