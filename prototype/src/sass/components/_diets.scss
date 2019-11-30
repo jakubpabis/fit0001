@@ -381,6 +381,24 @@
 
             }
 
+            &.wege {
+                color: $color-wege;
+
+                span {
+                    color: $color-wegedark;
+                }
+
+            }
+
+            &.hashi {
+                color: $color-hashi;
+
+                span {
+                    color: $color-hashidark;
+                }
+
+            }
+
         }
 
         &-form {
