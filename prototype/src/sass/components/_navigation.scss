@@ -313,7 +313,7 @@
 
                     &.msg {
                         background-color: white;
-                        border-color: $color-msg!important;
+                        border-color: $color-msg;
                     }
 
                     &.fb {
@@ -329,7 +329,7 @@
                         color: white!important;
 
                         &.fa-facebook-messenger {
-                            color: $color-msg;
+                            color: $color-msg!important;
                         }
 
                     }
