@@ -9,6 +9,9 @@
                 </a>
             </div>
             <div class="col-auto menu-btn">
+                <a href="/koszyk">
+                    <i class="fas fa-shopping-basket"></i>
+                </a>
                 <button type="button" class="menu-button">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -49,6 +52,12 @@
                             ));
                         ?>
                     </div>
+                    <div class="col-12 d-sm-none d-block text-center account-mobile">
+                        <a href="/moje-konto">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Moje konto</span>
+                        </a>
+                    </div>
                     <div class="d-sm-none d-block col-12 text-center mobile-contact">
                         <a title="Numer telefonu" href="tel:+48576118007">+48 576 118 007</a>
                         <div class="socials text-center">
@@ -62,16 +71,6 @@
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-12 mobile-bottom text-center">
-                        <a href="/koszyk">
-                            <i class="fas fa-shopping-basket"></i>
-                            <span>Koszyk</span>
-                        </a>
-                        <a href="/moje-konto">
-                            <i class="fas fa-user-circle"></i>
-                            <span>Moje konto</span>
-                        </a>
                     </div>
                 </div>
             </div>
