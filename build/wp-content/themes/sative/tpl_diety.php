@@ -7,6 +7,7 @@ get_header();
 
 $products = wc_get_products( array(
     'limit' => -1,
+    'status' => 'publish',
     'order' => 'ASC'
 ) );
 
