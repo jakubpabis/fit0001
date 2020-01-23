@@ -50,7 +50,8 @@ var $cities = {
 	'32-329': Array(
 		'Bolesław',
 		'Hutki'
-	)
+	),
+	'32-590': 'Libiąż'
 };
 
 var $orderDO;
