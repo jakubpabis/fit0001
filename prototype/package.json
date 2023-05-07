@@ -7,7 +7,7 @@
     "license": "MIT License",
     "keywords": "gulp",
     "devDependencies": {
-        "browser-sync": "^2.26.7",
+        "browser-sync": "^2.29.1",
         "es6-promise": "*",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "*",
